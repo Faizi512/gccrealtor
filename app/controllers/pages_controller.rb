@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 
     def thankyou
     end
+
+    def peninsula
+    end
+    
 end
