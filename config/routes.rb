@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root "pages#index"
 
   get "/chictower", to: "pages#chictower"
+  get "/jumeriah", to: "pages#jumeriah"
 end

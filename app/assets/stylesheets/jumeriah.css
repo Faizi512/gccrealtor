@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
 
 .theme_spacing{ margin:5% 0 3% 0px;}
 
-.herobg{background: url("../images/herobg.jpg") no-repeat center -200px;padding:5% 0px;background-size:cover!important;}
+.herobg{background: url("jherobg.jpg") no-repeat center -200px;padding:5% 0px;background-size:cover!important;}
 .logo{ text-align:center; margin:15px 0}
 .slogan{text-align: left;} 
 .slogan h2{ font-size:50px; color: #fff; font-weight:900; line-height: normal}
@@ -108,8 +108,8 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
 .inner_data{ margin:30px 0;}
 .ftrbg{ background:#C49E77; color: #fff; font-size: 20px; font-weight: normal; border-radius:30px 30px 0 0;  text-align: center; padding:15px 0;}
 
-.plaza{ background:url("../images/plz1.png") no-repeat center top; background-size:cover; margin:30px 0px;  padding: 30px; border-radius:30px;}
-.plaza01{ background:url("../images/plz2.png") no-repeat center top; background-size:cover; margin:30px 0px;  padding: 30px; border-radius:30px;}
+.plaza{ background:url("jplz1.png") no-repeat center top; background-size:cover; margin:30px 0px;  padding: 30px; border-radius:30px;}
+.plaza01{ background:url("jplz2.png") no-repeat center top; background-size:cover; margin:30px 0px;  padding: 30px; border-radius:30px;}
 .plaza_text{	background-color:#fff;
 	/*backdrop-filter: blur(50px);*/ padding:10px; border-radius:30px; padding: 30px; color: #434343; font-size: 20px; font-weight: normal;}
 .plaza_text h4{ font-size:38px; color:#C49E77; font-weight: bold; border-bottom: solid 2px #C49E77;}

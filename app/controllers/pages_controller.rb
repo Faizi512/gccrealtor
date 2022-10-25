@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
     def chictower
     end
+
+    def jumeriah
+    end
 end
