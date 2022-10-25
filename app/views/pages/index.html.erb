@@ -1,0 +1,625 @@
+<%=content_for :css do %>
+<%= stylesheet_link_tag 'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<%= stylesheet_link_tag 'homepage', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'carousel', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'step', media: 'all', 'data-turbolinks-track': 'reload' %>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</script>
+<%end%>
+
+
+
+
+
+
+
+<div class="herobg">
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-12">
+                    <div class="slogan">
+                        <h2>Looking To<br>Buy/Invest In Luxury<br>Property in Dubai?</h2>
+                        <p>
+                            Own Exclusive Property <br>for as low as 200,000 AED<br> with returns up to 10%
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h5 class="form_text">Find your Dream property now in less than 60 seconds</h5>
+                    <div class="search_form">
+                        <div class="">
+                            <div class="fieldsetStep d-flex justify-content-center align-items-end"><span></span></div>
+                            <form id="msform" class="fieldsetForm">
+                                <fieldset data-step="Type of property you are looking to buy/invest">
+                                    <div class="form-card">
+                                        <label class="img-btn">
+                                            <input type="radio" name="country-flags" checked>
+                                            <%=image_tag "fop1.png", width:"180"%>
+                                        </label>
+
+                                        <label class="img-btn">
+                                            <input type="radio" name="country-flags">
+                                            <%=image_tag "fop2.png", width: "180"%>
+                                        </label>
+
+                                        <label class="img-btn">
+                                            <input type="radio" name="country-flags">
+                                            <%=image_tag "fop3.png", width:"180" %>
+                                        </label>
+                                    </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                </fieldset>
+                                <fieldset data-step="Select the Area of Dubai">
+                                    <span class="badge badge-secondary">Select One or More</span>
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <table class="text-left">
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp1' type='checkbox' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp1'>I don’t know yet</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp2' type='checkbox' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp2'>Emaar Beachfront</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp3' type='checkbox' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp3'>Dubai Creek Harbour</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp4' type='checkbox' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp4'>Bluewaters Island</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp5' type='checkbox' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp5'>Port De La Mer</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp6' type='checkbox' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp6'>Jumeirah Beach Residence (JBR)</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <table class="text-left">
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp7' type='checkbox' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp7'>Downtown Dubai</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp8' type='checkbox' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp8'>Dubai Hills Estate</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp9' type='checkbox' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp9'>Palm Jumeirah</label>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp10' type='checkbox' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp10'>Business Bay</label>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp11' type='checkbox' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp11'>Dubai Marina</label>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp12' type='checkbox' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp12'>Jumeirah Golf Estate</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="Next" /> <input
+                                        type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                </fieldset>
+                                <fieldset data-step="What is your budget approx">
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <table class="text-left">
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp13' type='radio' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp13'> Below AED 1,000.000</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp14' type='radio' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp14'>AED 2,000.000 - 5,000.000</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp15' type='radio' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp15'>More than AED 10,000.000</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <table class="text-left">
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp16' type='radio' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp16'>AED 1,000.000 - 2,000.000</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp17' type='radio' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp17'>AED 5,000.000 - 10,000.000</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <input type="button" name="next" class="next action-button" value="Next" /> <input
+                                        type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                </fieldset>
+                                <fieldset data-step="Purpose of purchasing Real Estate">
+                                    <div class="form-card">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <table class="text-left">
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp18' type='radio' name='test'>
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp18'> Personal Use</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp20' type='radio' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp20'>investment and income generation</label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <table class="text-left">
+
+                                                    <tr>
+                                                        <td>
+                                                            <input id='inp19' type='radio' name='test'>
+
+                                                        </td>
+                                                        <td>
+                                                            <label for='inp19'>Secondary Income
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="Next" /> <input
+                                        type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                </fieldset>
+                                <fieldset
+                                    data-step="Submit your contact details and one of our real estate specialist will contact you soon!!">
+                                    <div class="form-card">
+                                        <div class="mb-3">
+                                            <input class="form-control form-control-lg cst_input" type="text"
+                                                placeholder="First Name" aria-label="Full Name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control form-control-lg cst_input" type="text"
+                                                placeholder="Last Name" aria-label="Full Name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control form-control-lg cst_input" type="text"
+                                                placeholder="Email" aria-label="Email">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control form-control-lg cst_input" type="text"
+                                                placeholder="Phone Number" aria-label="Phone Number">
+                                        </div>
+                                        <!--			    <div class="d-grid gap-2">  <button class="btn cstbtn" type="button">SUBMIT</button>
+</div> -->
+
+                                    </div>
+                                    <input type="button" name="Submit" class="next action-button" value="Submit" />
+                                    <!--<input type="button" name="previous" class="previous action-button-previous" value="Previous" />-->
+                                </fieldset>
+
+                                <fieldset data-step="Finish">
+                                    <div class="form-card">
+                                        <h2 class="purple-text text-center"><strong>Thank You</strong></h2> <br>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="d-flex justify-content-center">
+                <div class="col-md-10 mt-4">
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <div class="feature">
+                                Highest Rental Income
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="feature">
+                                Tax-Free Investments
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="feature">
+                                Flexible Payment Plans
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container">
+        <div class="about">
+            <p>
+                Dubai is a cosmopolitan city with over 200 Nationalities. It is one of the fantastic places for real
+                estate
+                investors to purchase and retain both long-term and short-term rental properties. The high yields of up
+                to
+                10%, relatively low property prices and numerous tax and visa benefits make it a great market to invest
+                in
+                property.<br><br>
+
+                With the Growth in Demand property prices in Dubai have increased by 14%.This year in the month of July,
+                Dubai
+                residential property index hit a ten year high, with nearly 9000 sales registered.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <h4 class="hadd">Why to Invest in Dubai?</h4>
+        <div class="row">
+            <div class="col-md-4 col-12"><%=image_tag "abt1.jpg", width: "804", class: "img-fluid", height: "719" %>
+            </div>
+            <div class="col-md-8 col-12">
+                <div class="abt_text">
+                    <h5>Growing Population</h5>
+                    <p>Dubai is a cosmopolitan city with home <br>
+                        to over 200 Nationalities residing in hopes to <br>
+                        expand their careers and businesses. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <div class="abt_text text-right">
+                    <h5>Stable Currency</h5>
+                    <p>The UAE Dirham has been pegged to the US dollar<br>since 1973 and set at constant rate since 1997
+                        -
+                        making <br>it one of the most stable currencies in the world. </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12"><%=image_tag "abt2.jpg", width: "804", class: "img-fluid",  height: "719" , alt: "" %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-4 col-12"><%=image_tag "abt3.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            </div>
+            <div class="col-md-8 col-12">
+                <div class="abt_text">
+                    <h5>Development and Innovation</h5>
+                    <p>Dubai is a major hub for technology and business growth,<br> constantly evolving in order to
+                        foster an
+                        innovation,<br> ecosystem. Dubai is a recognized world leader for AI,<br> Robotics, and fintech
+                        in the
+                        region.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <div class="abt_text text-right">
+                    <h5>High Standard of Living</h5>
+                    <p>Dubai is globally recognized as one of the best cities to<br> invest in due to its excellent
+                        quality of
+                        life and world-class<br> infrastructure. With top-quality dining venues, luxurious
+                        <br>lifestyle,
+                        beautiful beaches, connectivity, and state-of-the-art<br> entertainment and recreational
+                        facilities. </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12"><%=image_tag "abt4.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-4 col-12"><%=image_tag "abt5.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            </div>
+            <div class="col-md-8 col-12">
+                <div class="abt_text">
+                    <h5>Safety and security</h5>
+                    <p>The UAE is one of the world’s safest countries with<br> a law enforcement system that showcases
+                        years<br>
+                        of development and foresight.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <div class="abt_text text-right">
+                    <h5>Tax-Free Investment</h5>
+                    <p>If you buy a property in Dubai, you don’t have to worry<br> about tax, as the emirate has no
+                        annual
+                        property tax, income tax,<br> or capital gains tax, making it the best city<br>to invest in real
+                        estate.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12"><%=image_tag "abt6.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-4 col-12"><%=image_tag "abt7.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            </div>
+            <div class="col-md-8 col-12">
+                <div class="abt_text">
+                    <h5>High Returns</h5>
+                    <p>Real estate in Dubai offers a high return on investment,<br> significantly higher than those
+                        offered in
+                        its counterpart<br> cities, like London and New York. Indeed, it’s a rewarding<br> experience as
+                        Dubai
+                        always has attractive properties in popular<br> areas which offer exceptional returns.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <div class="abt_text text-right">
+                    <h5>World-Class Healthcare</h5>
+                    <p>With heavy investment in the healthcare sector and some<br> of the region’s finest hospitals and
+                        clinics,
+                        the city is<br> a perfect choice for your health and wellbeing.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12"><%=image_tag "abt8.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-4 col-12"><%=image_tag "abt9.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            </div>
+            <div class="col-md-8 col-12">
+                <div class="abt_text">
+                    <h5>Managing COVID-19</h5>
+                    <p>With its country-wide vaccination campaign, the UAE<br> is a global model for crisis
+                        preparedness,
+                        maintaining the <br>highest levels of protection against the pandemic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="theme_spacing mb-5">
+    <div class="container brdr">
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <div class="abt_text text-right">
+                    <h5>Easy Connectivity</h5>
+                    <p>Dubai is a direct flight away from the 97 countries with<br> the world’s leading airlines flying
+                        from
+                        Dubai’s airports,<br> helping you access the rest of the world with ease.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12"><%=image_tag "abt10.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ftrbg">
+    <div class="container">
+        <p>© 2022 <strong>DUBAI PROPERTY</strong> Real Estate.</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<%=content_for :javascript do%>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js'></script>
+<%= javascript_pack_tag 'slider', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'step', 'data-turbolinks-track': 'reload' %>
+
+<script>
+    /* Demo purposes only */
+    var snippet = [].slice.call(document.querySelectorAll('.hover'));
+    if (snippet.length) {
+        snippet.forEach(function (snippet) {
+            snippet.addEventListener('mouseout', function (event) {
+                if (event.target.parentNode.tagName === 'figure') {
+                    event.target.parentNode.classList.remove('hover')
+                } else {
+                    event.target.parentNode.classList.remove('hover')
+                }
+            });
+        });
+    }
+</script>
+
+<script>
+    var changed = function () {
+
+        Array.from(document.querySelectorAll("table")).forEach((element, index) => {
+            Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
+
+                if (myinp.checked == true) {
+                    myinp.parentNode.parentNode.classList.add("active");
+                } else {
+                    myinp.parentNode.parentNode.classList.remove("active");
+                }
+
+            });
+        });
+    } //changed function ends
+
+    Array.from(document.querySelectorAll("table")).forEach((element, index) => {
+        Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
+            var checkmark = document.createElement("span");
+            checkmark.classList.add("checkmark");
+            myinp.parentNode.appendChild(checkmark);
+            myinp.addEventListener("change", changed);
+        });
+    });
+</script>
+
+<%end%>
