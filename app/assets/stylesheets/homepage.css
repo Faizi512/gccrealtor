@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
 
 .form_text{ font-size:18px; text-align: center; color: #FFB82A; font-weight: 700; margin: 0 0 15px 0px;}
 
-.herobg{background:url("herobg.jpg") no-repeat center -180px;background-size: cover;padding:5% 0px!important;}
+.herobg{background:url(hherobg.jpg) no-repeat center -180px;background-size: cover;padding:5% 0px!important;}
 .logo{ text-align:left; margin:15px 0}
 .slogan{text-align: left;margin: 15% 0 1% 0px;} 
 .slogan h2{ font-size:38px; color: #fff; font-weight:900; line-height: normal; margin:10px 0px;}
