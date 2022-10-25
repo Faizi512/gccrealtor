@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   get "/chictower", to: "pages#chictower"
   get "/jumeriah", to: "pages#jumeriah"
+  get "/thankyou", to: "pages#thankyou"
 end

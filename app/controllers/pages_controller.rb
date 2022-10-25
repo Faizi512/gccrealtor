@@ -7,4 +7,7 @@ class PagesController < ApplicationController
 
     def jumeriah
     end
+
+    def thankyou
+    end
 end
