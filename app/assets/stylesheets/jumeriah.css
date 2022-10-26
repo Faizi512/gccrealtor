@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
 		.spec {
     padding: 20px 15px!important;
     border-radius: 8px;
-    background-color: rgb(74 56 35);
+    background-color: rgb(74, 56, 35);
     backdrop-filter: blur(10px);
     padding: 8px;
     margin: 0 0 15px 0;
