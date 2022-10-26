@@ -26,7 +26,7 @@ padding:15px 15px!important; border-radius: 8px;
 	backdrop-filter: blur(50px);
     border-color:transparent!important;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    box-shadow: 0 0 0 0.25rem rgb(13, 110, 253 / 25%);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
