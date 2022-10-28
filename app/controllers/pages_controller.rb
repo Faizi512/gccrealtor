@@ -18,7 +18,6 @@ class PagesController < ApplicationController
     end
 
     def submit_lead
-        byebug
         uri = URI("https://dukeleads.leadbyte.co.uk/api/submit.php?returnjson=yes&campid=GCC-REALTORS&email=#{params[:email]}&firstname=#{params[:first_name]}&lastname=#{params[:last_name]}&phone1=#{params[:phone]}&sid=#{params[:sid]}&project=#{params[:project]}&propertytype=#{params[:propertytype]}&area=#{params[:area]}&purchasepurpose=#{params[:purchasepurpose]}&budget=#{params[:budget]}&phonecode=#{params[:phonecode]}&phonelocal=#{params[:phone]}&sid=#{params[:sid]}&optinurl=#{"https://gccrealtors.herokuapp.com/" + request.fullpath}")
         res = Net::HTTP.get_response(uri)
         # if JSON.parse(res.body)["code"] == 1
