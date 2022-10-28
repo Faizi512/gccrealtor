@@ -21,7 +21,7 @@ padding:15px 15px!important; border-radius: 8px;
 	backdrop-filter: blur(50px); padding:8px;
 }
 .search_form h6{ text-align: center; margin: 0 0 15px 0px; font-size:26px; color: #fff; font-weight: bold; } 
-.cst_input{  color: #fff!important; padding: 0 15px!important; border: transparent; font-size: 18px;	background-color: rgba(0, 0, 00, 0.2)!important; border: solid 1px #FFB82A!important;
+.cst_input{  color: #fff!important; padding: 0 -6px!important; border: transparent; font-size: 18px;	background-color: rgba(0, 0, 00, 0.2)!important; border: solid 1px #FFB82A!important;
 	backdrop-filter: blur(50px)!important; padding:8px;}
 
 .form-control:focus {
@@ -444,4 +444,6 @@ margin:0px;
 		
     }
 
-          
+.iti.iti--allow-dropdown{
+  display: block;
+}

@@ -26,24 +26,43 @@
                 <div class="col-md-4 col-12">
                     <div class="search_form">
                         <h6>Register your Interest to avail the best offers</h6>
+                        <form action="/submit_lead" method="POST">
                         <div class="mb-3">
-                            <input class="form-control form-control-lg cst_input" type="text" placeholder="First Name"
+                            <input class="form-control form-control-lg cst_input" type="text" placeholder="First Name" name="first_name"
                                 aria-label="Full Name">
                         </div>
                         <div class="mb-3">
-                            <input class="form-control form-control-lg cst_input" type="text" placeholder="Last Name"
+                            <input class="form-control form-control-lg cst_input" type="text" placeholder="Last Name" name="last_name"
                                 aria-label="Full Name">
                         </div>
                         <div class="mb-3">
-                            <input class="form-control form-control-lg cst_input" type="text" placeholder="Email"
+                            <input class="form-control form-control-lg cst_input" type="text" placeholder="Email" name="email"
                                 aria-label="Email">
                         </div>
                         <div class="mb-3">
-                            <input class="form-control form-control-lg cst_input" type="text" placeholder="Phone Number"
-                                aria-label="Phone Number">
+                        <div class="change-country"></div>
+                                <input placeholder="Phone No"  name="phone"
+                            class="phonecode form-control form-control-lg cst_input"
+                            data-parsley-required="true"
+                            data-parsley-required-message="Please Enter Valid Phone Number"
+                            data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                            type="tel" required="">
+                            <div class="phoneerror"></div>
+                                <input type="hidden" value="villa/townhouse" name="propertytype">
+                                <input id='inp1' value="Idontknowyet" type='hidden'
+                                                                name='area'>
+                                <input id='inp13' type='hidden' value="BelowAED1,000.000"
+                                name='budget'>
+                                <input id='inp18' name="purchasepurpose"
+                                                                value="Persona Use" type='hidden'>
+                                <input type="hidden" name="sid" value="1">
+                                <input type="hidden" name="project" value="chictower">
+                                <input type="hidden" id="phonecode" name="phonecode" value="+44">
+                                <input type="hidden" name="phonelocal" value="12345678">
                         </div>
-                        <div class="d-grid gap-2"> <button class="btn cstbtn" type="button">SUBMIT</button>
+                        <div class="d-grid gap-2"> <button class="btn cstbtn" type="submit">SUBMIT</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -129,7 +148,7 @@
 </div>
 
 <div class="col-md-6 col-12 text-center ms-auto me-auto">
-    <button class="btn cstbtn" type="button">REGISTER YOUR INTEREST</button>
+<a href="#form" class="btn cstbtn01" style="background: #F15C62;color:white">REGISTER YOUR INTEREST</a>
 </div>
 
 <div class="theme_spacing">
@@ -178,7 +197,8 @@
                     Your home boasts sweeping panoramas of Dubai’s Iconic Canal and beyond, allowing <br><br>
 
                     you to revitalize your perspective on life, everytime you look out of your window.</p>
-                <button class="btn cstbtn" type="button">REGISTER YOUR INTEREST</button>
+                    <a href="#form" class="btn cstbtn01" style="background: #F15C62;color:white">REGISTER YOUR INTEREST</a>
+
             </div>
         </div>
     </div>
@@ -511,7 +531,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>Studio. Type 1</h5>
-                                <button class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</button>
+                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -524,7 +544,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>Studio. Type 2</h5>
-                                <button class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</button>
+                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -537,7 +557,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>Studio. Type 3</h5>
-                                <button class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</button>
+                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -550,7 +570,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>1 Bedroom. Type 1</h5>
-                                <button class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</button>
+                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -563,7 +583,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>1 Bedroom. Type 2</h5>
-                                <button class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</button>
+                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -576,7 +596,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>1 Bedroom. Type 3</h5>
-                                <button class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</button>
+                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -589,7 +609,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>2 Bedroom. Type 1</h5>
-                                <button class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</button>
+                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -602,7 +622,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>2 Bedroom. Type 2</h5>
-                                <button class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</button>
+                                <a class="btn cstbtn01" href="#form" type="button">REGISTER YOUR INTEREST</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -627,7 +647,7 @@
 
 
 <%=content_for :javascript do%>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
 </script>
@@ -635,6 +655,8 @@
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
 </script>
 <%= javascript_pack_tag 'slider', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'form', 'data-turbolinks-track': 'reload' %>
+
 
 <script>
     /* Full example of API usage including "like button" as a custom control */

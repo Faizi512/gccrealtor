@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/jumeriah", to: "pages#jumeriah"
   get "/thankyou", to: "pages#thankyou"
   get "/peninsula", to: "pages#peninsula"
+  post "/submit_lead", to: "pages#submit_lead"
 end

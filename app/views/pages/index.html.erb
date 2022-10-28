@@ -9,12 +9,6 @@
 </script>
 <%end%>
 
-
-
-
-
-
-
 <div class="herobg">
     <div class="">
         <div class="container">
@@ -33,25 +27,35 @@
                     <div class="search_form">
                         <div class="">
                             <div class="fieldsetStep d-flex justify-content-center align-items-end"><span></span></div>
-                            <form id="msform" class="fieldsetForm">
+                            <form id="msform" class="fieldsetForm" action="/submit_lead" method="POST">
+                                <%if flash[:notice].present?%>
+                                    <div class="bg-warning"> <%= flash[:notice] %></div>
+                                <%end%>
                                 <fieldset data-step="Type of property you are looking to buy/invest">
                                     <div class="form-card">
                                         <label class="img-btn">
-                                            <input type="radio" name="country-flags" checked>
-                                             <%=image_tag "hfop1.png", width:"180"%>
+                                            <input type="radio" value="residence" name="propertytype" checked>
+                                            <%=image_tag "hfop1.png", width:"180"%>
                                         </label>
 
                                         <label class="img-btn">
-                                            <input type="radio" name="country-flags">
-                                             <%=image_tag "hfop2.png", width: "180"%>
+                                            <input type="radio" value="full-floor-penthouse" name="propertytype">
+                                            <%=image_tag "hfop2.png", width: "180"%>
                                         </label>
 
                                         <label class="img-btn">
-                                            <input type="radio" name="country-flags">
-                                             <%=image_tag "hfop3.png", width:"180" %>
+                                            <input type="radio" value="villa/townhouse" name="propertytype">
+                                            <%=image_tag "hfop3.png", width:"180" %>
                                         </label>
                                     </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                    <input type="hidden" name="sid" value="1">
+                                    <input type="hidden" name="project" value="homepage">
+                                    <input type="hidden" id="phonecode" name="phonecode" value="+44">
+                                    <input type="hidden" name="phonelocal" value="12345678">
+
                                 </fieldset>
+                               
+
                                 <fieldset data-step="Select the Area of Dubai">
                                     <span class="badge badge-secondary">Select One or More</span>
                                     <div class="form-card">
@@ -61,7 +65,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp1' type='checkbox' name='test'>
+                                                            <input id='inp1' value="I don’t know yet" type='checkbox'
+                                                                name='area[]'>
                                                         </td>
                                                         <td>
                                                             <label for='inp1'>I don’t know yet</label>
@@ -69,7 +74,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp2' type='checkbox' name='test'>
+                                                            <input id='inp2' value="Emaar Beachfront" type='checkbox'
+                                                                name='area[]'>
 
                                                         </td>
                                                         <td>
@@ -78,7 +84,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp3' type='checkbox' name='test'>
+                                                            <input id='inp3' value="Dubai Creek Harbour" type='checkbox'
+                                                                name='area[]'>
                                                         </td>
                                                         <td>
                                                             <label for='inp3'>Dubai Creek Harbour</label>
@@ -86,7 +93,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp4' type='checkbox' name='test'>
+                                                            <input id='inp4' value="Bluewaters Island" type='checkbox'
+                                                                name='area[]'>
                                                         </td>
                                                         <td>
                                                             <label for='inp4'>Bluewaters Island</label>
@@ -94,7 +102,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp5' type='checkbox' name='test'>
+                                                            <input id='inp5' value="Port De La Mer" type='checkbox'
+                                                                name='area[]'>
 
                                                         </td>
                                                         <td>
@@ -103,7 +112,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp6' type='checkbox' name='test'>
+                                                            <input id='inp6' value="Jumeirah Beach Residence (JBR)"
+                                                                type='checkbox' name='area[]'>
                                                         </td>
                                                         <td>
                                                             <label for='inp6'>Jumeirah Beach Residence (JBR)</label>
@@ -116,7 +126,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp7' type='checkbox' name='test'>
+                                                            <input id='inp7' value="Downtown Dubai" type='checkbox'
+                                                                name='area[]'>
 
                                                         </td>
                                                         <td>
@@ -125,7 +136,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp8' type='checkbox' name='test'>
+                                                            <input id='inp8' value="Dubai Hills Estate" type='checkbox'
+                                                                name='area[]'>
 
                                                         </td>
                                                         <td>
@@ -134,7 +146,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp9' type='checkbox' name='test'>
+                                                            <input id='inp9' value="Palm Jumeirah" type='checkbox'
+                                                                name='area[]'>
                                                         </td>
                                                         <td>
                                                             <label for='inp9'>Palm Jumeirah</label>
@@ -143,7 +156,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp10' type='checkbox' name='test'>
+                                                            <input id='inp10' value="Business Bay" type='checkbox'
+                                                                name='area[]'>
                                                         </td>
                                                         <td>
                                                             <label for='inp10'>Business Bay</label>
@@ -152,7 +166,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp11' type='checkbox' name='test'>
+                                                            <input id='inp11' value="Dubai Marina" type='checkbox'
+                                                                name='area[]'>
                                                         </td>
                                                         <td>
                                                             <label for='inp11'>Dubai Marina</label>
@@ -161,7 +176,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp12' type='checkbox' name='test'>
+                                                            <input id='inp12' value="Jumeirah Golf Estate"
+                                                                type='checkbox' name='area[]'>
                                                         </td>
                                                         <td>
                                                             <label for='inp12'>Jumeirah Golf Estate</label>
@@ -183,7 +199,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp13' type='radio' name='test'>
+                                                            <input id='inp13' type='radio' value="Below AED 1,000.000"
+                                                                name='budget'>
                                                         </td>
                                                         <td>
                                                             <label for='inp13'> Below AED 1,000.000</label>
@@ -191,7 +208,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp14' type='radio' name='test'>
+                                                            <input id='inp14' type='radio'
+                                                                value="AED 2,000.000 - 5,000.000" name='budget'>
 
                                                         </td>
                                                         <td>
@@ -200,7 +218,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp15' type='radio' name='test'>
+                                                            <input id='inp15' type='radio'
+                                                                value="More than AED 10,000.000" name='budget'>
                                                         </td>
                                                         <td>
                                                             <label for='inp15'>More than AED 10,000.000</label>
@@ -213,7 +232,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp16' type='radio' name='test'>
+                                                            <input id='inp16' type='radio'
+                                                                value="AED 1,000.000 - 2,000.000" name='budget'>
 
                                                         </td>
                                                         <td>
@@ -222,7 +242,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp17' type='radio' name='test'>
+                                                            <input id='inp17' type='radio'
+                                                                value="AED 5,000.000 - 10,000.000" name='budget'>
 
                                                         </td>
                                                         <td>
@@ -246,7 +267,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp18' type='radio' name='test'>
+                                                            <input id='inp18' name="purchasepurpose"
+                                                                value="Personal Use" type='radio'>
                                                         </td>
                                                         <td>
                                                             <label for='inp18'> Personal Use</label>
@@ -254,7 +276,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <input id='inp20' type='radio' name='test'>
+                                                            <input id='inp20' name="purchasepurpose" type='radio'
+                                                                value="investment and income generation">
 
                                                         </td>
                                                         <td>
@@ -268,7 +291,8 @@
 
                                                     <tr>
                                                         <td>
-                                                            <input id='inp19' type='radio' name='test'>
+                                                            <input id='inp19' name="purchasepurpose" type='radio'
+                                                                value="Secondary Income">
 
                                                         </td>
                                                         <td>
@@ -289,25 +313,33 @@
                                     <div class="form-card">
                                         <div class="mb-3">
                                             <input class="form-control form-control-lg cst_input" type="text"
-                                                placeholder="First Name" aria-label="Full Name">
+                                                placeholder="First Name" name="first_name" value=""
+                                                aria-label="Full Name">
                                         </div>
                                         <div class="mb-3">
                                             <input class="form-control form-control-lg cst_input" type="text"
-                                                placeholder="Last Name" aria-label="Full Name">
+                                                placeholder="Last Name" name="last_name" aria-label="Full Name">
                                         </div>
                                         <div class="mb-3">
                                             <input class="form-control form-control-lg cst_input" type="text"
-                                                placeholder="Email" aria-label="Email">
+                                                placeholder="Email" name="email" aria-label="Email">
                                         </div>
                                         <div class="mb-3">
-                                            <input class="form-control form-control-lg cst_input" type="text"
-                                                placeholder="Phone Number" aria-label="Phone Number">
+                                        <div class="change-country"></div>
+                                        <input placeholder="Phone No" id="phonecode" name="phone"
+                                     class="phonecode form-control form-control-lg cst_input"
+                                     data-parsley-required="true"
+                                     data-parsley-required-message="Please Enter Valid Phone Number"
+                                     data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                     type="tel" required="">
+                                     <div class="phoneerror"></div>
+
                                         </div>
-                                        <!--			    <div class="d-grid gap-2">  <button class="btn cstbtn" type="button">SUBMIT</button>
+                                        <!--			    <div class="d-grid gap-2">  <button class="btn cstbtn" type="submit">SUBMIT</button>
 </div> -->
 
                                     </div>
-                                    <input type="button" name="Submit" class="next action-button" value="Submit" />
+                                    <input type="submit" name="Submit" class="next action-button" value="Submit" />
                                     <!--<input type="button" name="previous" class="previous action-button-previous" value="Previous" />-->
                                 </fieldset>
 
@@ -398,7 +430,8 @@
                         making <br>it one of the most stable currencies in the world. </p>
                 </div>
             </div>
-            <div class="col-md-4 col-12"> <%=image_tag "habt2.jpg", width: "804", class: "img-fluid",  height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt2.jpg", width: "804", class: "img-fluid",  height: "719" , alt: "" %>
             </div>
         </div>
     </div>
@@ -407,7 +440,8 @@
 <div class="theme_spacing">
     <div class="container brdr">
         <div class="row">
-            <div class="col-md-4 col-12"> <%=image_tag "habt3.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt3.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
             </div>
             <div class="col-md-8 col-12">
                 <div class="abt_text">
@@ -438,7 +472,8 @@
                         facilities. </p>
                 </div>
             </div>
-            <div class="col-md-4 col-12"> <%=image_tag "habt4.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt4.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
             </div>
         </div>
     </div>
@@ -447,7 +482,8 @@
 <div class="theme_spacing">
     <div class="container brdr">
         <div class="row">
-            <div class="col-md-4 col-12"> <%=image_tag "habt5.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt5.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
             </div>
             <div class="col-md-8 col-12">
                 <div class="abt_text">
@@ -475,7 +511,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-4 col-12"> <%=image_tag "habt6.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt6.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
             </div>
         </div>
     </div>
@@ -484,7 +521,8 @@
 <div class="theme_spacing">
     <div class="container brdr">
         <div class="row">
-            <div class="col-md-4 col-12"> <%=image_tag "habt7.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt7.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
             </div>
             <div class="col-md-8 col-12">
                 <div class="abt_text">
@@ -515,7 +553,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-4 col-12"> <%=image_tag "habt8.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt8.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
             </div>
         </div>
     </div>
@@ -524,7 +563,8 @@
 <div class="theme_spacing">
     <div class="container brdr">
         <div class="row">
-            <div class="col-md-4 col-12"> <%=image_tag "habt9.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt9.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
             </div>
             <div class="col-md-8 col-12">
                 <div class="abt_text">
@@ -551,7 +591,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-4 col-12"> <%=image_tag "habt10.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
+            <div class="col-md-4 col-12">
+                <%=image_tag "habt10.jpg", width: "804", class: "img-fluid", height: "719" , alt: "" %>
             </div>
         </div>
     </div>
