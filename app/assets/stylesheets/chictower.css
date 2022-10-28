@@ -404,7 +404,7 @@ figcaption {
   backdrop-filter: blur(50px);
   border-color: transparent !important;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+  box-shadow: 0, 0, 0, 0.25rem rgb(13, 110, 253 / 25%);
 }
 
 ::placeholder {
@@ -626,7 +626,7 @@ figcaption {
   }
 
   .herobg {
-    background: url(../images/herobg.jpg) no-repeat center -350px;
+    background: url(chictower/herobg.jpg) no-repeat center -350px;
     padding: 5% 0px;
   }
 
