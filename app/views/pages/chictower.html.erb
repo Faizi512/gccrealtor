@@ -16,7 +16,7 @@
                 <div class="col-md-8 col-12">
                     <div class="slogan">
                         <div class="logo">
-                             <%=image_tag "clogo.png" , width: "150",   class: "img-fluid", height: "130", alt: "" %> 
+                            <%=image_tag "chictower/logo.png" , width: "150" , class: "img-fluid" , height: "130" , alt: "" %>
                         </div>
                         <h5>CHIC Tower De GRISOGONO Geneve</h5>
                         <h2>REAWAKEN<br>LUXURY</h2>
@@ -27,41 +27,38 @@
                     <div class="search_form">
                         <h6>Register your Interest to avail the best offers</h6>
                         <form action="/submit_lead" method="POST">
-                        <div class="mb-3">
-                            <input class="form-control form-control-lg cst_input" type="text" placeholder="First Name" name="first_name"
-                                aria-label="Full Name">
-                        </div>
-                        <div class="mb-3">
-                            <input class="form-control form-control-lg cst_input" type="text" placeholder="Last Name" name="last_name"
-                                aria-label="Full Name">
-                        </div>
-                        <div class="mb-3">
-                            <input class="form-control form-control-lg cst_input" type="text" placeholder="Email" name="email"
-                                aria-label="Email">
-                        </div>
-                        <div class="mb-3">
-                        <div class="change-country"></div>
-                                <input placeholder="Phone No"  name="phone"
-                            class="phonecode form-control form-control-lg cst_input"
-                            data-parsley-required="true"
-                            data-parsley-required-message="Please Enter Valid Phone Number"
-                            data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
-                            type="tel" required="">
-                            <div class="phoneerror"></div>
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg cst_input" type="text"
+                                    placeholder="First Name" aria-label="Full Name">
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg cst_input" type="text"
+                                    placeholder="Last Name" aria-label="Full Name">
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg cst_input" type="text" placeholder="Email"
+                                    aria-label="Email">
+                            </div>
+                            <div class="mb-3">
+                                <div class="change-country"></div>
+                                <input placeholder="Phone No" name="phone"
+                                    class="phonecode form-control form-control-lg cst_input"
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter Valid Phone Number"
+                                    data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                    type="tel" required>
+                                <div class="phoneerror"></div>
                                 <input type="hidden" value="villa/townhouse" name="propertytype">
-                                <input id='inp1' value="Idontknowyet" type='hidden'
-                                                                name='area'>
-                                <input id='inp13' type='hidden' value="BelowAED1,000.000"
-                                name='budget'>
-                                <input id='inp18' name="purchasepurpose"
-                                                                value="Persona Use" type='hidden'>
+                                <input id='inp1' value="Idontknowyet" type='hidden' name='area'>
+                                <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>
+                                <input id='inp18' name="purchasepurpose" value="Persona Use" type='hidden'>
                                 <input type="hidden" name="sid" value="1">
                                 <input type="hidden" name="project" value="chictower">
                                 <input type="hidden" id="phonecode" name="phonecode" value="+44">
                                 <input type="hidden" name="phonelocal" value="12345678">
-                        </div>
-                        <div class="d-grid gap-2"> <button class="btn cstbtn" type="submit">SUBMIT</button>
-                        </div>
+                            </div>
+                            <div class="d-grid gap-2"> <button class="btn cstbtn" type="submit">SUBMIT</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -80,7 +77,7 @@
                     <div class="">
                         <div class="row g-0">
                             <div class="col-md-4 col-4">
-                                 <%=image_tag "c01.png" , class: "img-fluid",   alt: "" %>
+                                <%=image_tag "chictower/01.png" , class: "img-fluid" , alt: "" %>
                             </div>
                             <div class="col-md-8 col-8">
                                 <div class="">
@@ -97,7 +94,7 @@
                     <div class="">
                         <div class="row g-0">
                             <div class="col-md-4 col-4">
-                                 <%=image_tag "c02.png" , class:"img-fluid" , alt: "" %>
+                                <%=image_tag "chictower/02.png" , class: "img-fluid" , alt: "" %>
                             </div>
                             <div class="col-md-8 col-8">
                                 <div class="">
@@ -114,7 +111,7 @@
                     <div class="">
                         <div class="row g-0">
                             <div class="col-md-4 col-4">
-                                 <%=image_tag "c03.png" , class: "img-fluid" , alt: "" %>
+                                <%=image_tag "chictower/03.png" , class: "img-fluid" , alt: "" %>
                             </div>
                             <div class="col-md-8 col-8">
                                 <div class="">
@@ -131,7 +128,7 @@
                     <div class="">
                         <div class="row g-0">
                             <div class="col-md-4 col-4">
-                                 <%=image_tag "c03.png" , class: "img-fluid" , alt: "" %>
+                                <%=image_tag "chictower/03.png" , class: "img-fluid" , alt: "" %>
                             </div>
                             <div class="col-md-8 col-8">
                                 <div class="">
@@ -184,21 +181,116 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-12">
-             <%=image_tag "cabt.png" , width: "800" , class: "img-fluid", height: "783" , alt: "" %>
+
+<div class="theme_spacing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Download Brochure</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5">
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <span for="exampleFormControlInput1" class="form-label">First Name</span>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="First Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <span for="exampleFormControlInput1" class="form-label">Last Name</span>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Last Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <span for="exampleFormControlInput1" class="form-label">Email</span>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Email">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <span for="exampleFormControlInput1" class="form-label">Phone Number</span>
+                                            <input type="tel" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                        <button class="btn btn-dark" type="button">Register Now</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <figure class='preview'>
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"> <%=image_tag "chictower/dn1.jpg" %> </a>
+                    <!--    <div class='img-overlay'>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
+    </div>-->
+
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Brochure</a>
+
+                </figure>
+
+            </div>
+            <div class="col-md-4 col-12">
+                <figure class='preview'>
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"> <%=image_tag "chictower/dn2.jpg" %> </a>
+                    <!--    <div class='img-overlay'>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
+    </div>-->
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Floor Plan</a>
+                </figure>
+            </div>
+            <div class="col-md-4 col-12">
+                <figure class='preview'>
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"><%=image_tag "chictower/dn3.jpg" %></a>
+                    <!--    <div class='img-overlay'>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
+    </div>-->
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Payment
+                        Plan</a>
+
+                </figure>
+            </div>
         </div>
-        <div class="col-md-6 col-12">
-            <div class="abt_th">
-                <p>At Chic tower you meditate with your eyes closed. But you enjoy the view with eyes full of wonder.
-                    <br><br>
+    </div>
+</div>
 
-                    Your home boasts sweeping panoramas of Dubai’s Iconic Canal and beyond, allowing <br><br>
+<div class="theme_spacing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <%=image_tag "chictower/abt.png" , width: "800" , class: "img-fluid" , height: "783" , alt: "" %>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="abt_th">
+                    <p>At Chic tower you meditate with your eyes closed. But you enjoy the view with eyes full of
+                        wonder.
+                        <br><br>
 
-                    you to revitalize your perspective on life, everytime you look out of your window.</p>
-                    <a href="#form" class="btn cstbtn01" style="background: #F15C62;color:white">REGISTER YOUR INTEREST</a>
+                        Your home boasts sweeping panoramas of Dubai’s Iconic Canal and beyond, allowing <br><br>
 
+                        you to revitalize your perspective on life, everytime you look out of your window.</p>
+                        <a href="#form" class="btn cstbtn01" style="background: #F15C62;color:white">REGISTER YOUR INTEREST</a>
+                        </div>
             </div>
         </div>
     </div>
@@ -212,7 +304,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft1.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft1.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -227,7 +319,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft2.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft2.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -241,7 +333,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft3.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft3.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -255,7 +347,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft4.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft4.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -269,7 +361,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft5.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft5.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -283,7 +375,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft6.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft6.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -297,7 +389,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft7.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft7.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -311,7 +403,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft8.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft8.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -326,7 +418,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft9.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft9.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -341,7 +433,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft10.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft10.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -356,7 +448,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft11.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft11.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -371,7 +463,7 @@
                 <div class="feat">
                     <div class="row g-0">
                         <div class="col-md-2 col-2">
-                             <%=image_tag "cft12.png", class: "img-fluid" , alt: "" %>
+                            <%=image_tag "chictower/ft12.png" , class: "img-fluid" , alt: "" %>
                         </div>
                         <div class="col-md-10 col-10">
                             <div class="">
@@ -390,114 +482,114 @@
 
     <div class="spotlight-group row" data-fit="cover" data-autohide="all">
         <div class="col-md-4 col-12">
-            <a class="spotlight" href="#">
-                 <%=image_tag "cgl1.jpg"%>
-            </a>
-        </div>
-        <div class="col-md-4 col-12">
-            <a class="spotlight" href="#">
-                 <%=image_tag "cgl2.jpg"%>
-            </a>
-            <a class="spotlight" href="#">
-                 <%=image_tag "cgl3.jpg"%>
-            </a>
-        </div>
-        <div class="col-md-4 col-12">
-            <a class="spotlight" href="#">
-                 <%=image_tag "cgl4.jpg"%>
-            </a>
-        </div>
-        <div class="col-md-6 col-12">
-            <a class="spotlight" href="#">
-                 <%=image_tag "cgl5.jpg"%>
-            </a>
-        </div>
-        <div class="col-md-6 col-12">
-            <a class="spotlight" href="#">
-                 <%=image_tag "cgl6.jpg"%>
-            </a>
-        </div>
+            <a class="spotlight" href="images/gl1.jpg">
+                <%=image_tag "chictower/gl1.jpg"%>
+        </a>
+      </div>
+      <div class="col-md-4 col-12">
+        <a class="spotlight" href="images/gl2.jpg">
+          <%=image_tag "chictower/gl2.jpg"%>
+        </a>
+        <a class="spotlight" href="images/gl3.jpg">
+          <%=image_tag "chictower/gl3.jpg"%>
+        </a>
+      </div>
+      <div class="col-md-4 col-12">
+        <a class="spotlight" href="images/gl4.jpg">
+          <%=image_tag "chictower/gl4.jpg"%>
+        </a>
+      </div>
+      <div class="col-md-6 col-12">
+        <a class="spotlight" href="images/gl5.jpg">
+          <%=image_tag "chictower/gl5.jpg"%>
+        </a>
+      </div>
+      <div class="col-md-6 col-12">
+        <a class="spotlight" href="images/gl6.jpg">
+          <%=image_tag "chictower/gl6.jpg"%>
+        </a>
+      </div>
     </div>
 
 
 
 
-</div>
+  </div>
 
-<div class="theme_spacing">
+  <div class="theme_spacing">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-12">
-                <div class="col-md-8 float-start">
-                    <div class="feat">
-                        <div class="row g-0">
-                            <div class="col-md-2 col-2">
-                                 <%=image_tag "cpin.png", class: "img-fluid" , alt: "" %>
-                            </div>
-                            <div class="col-md-10 col-10">
-                                <div class="">
-                                    <h5 class="card-title01">16 Mins Away <br>
-                                        From Dubai International <br>
-                                        Airport</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 float-end">
-                    <div class="feat">
-                        <div class="row g-0">
-                            <div class="col-md-2 col-2">
-                                 <%=image_tag "cpin.png" , class: "img-fluid" , alt: "" %>
-                            </div>
-                            <div class="col-md-10 col-10">
-                                <div class="">
-                                    <h5 class="card-title01">7 Mins<br>
-                                        Away from The <br>
-                                        Dubai Mall</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 float-start">
-                    <div class="feat">
-                        <div class="row g-0">
-                            <div class="col-md-2 col-2">
-                                 <%=image_tag "cpin.png" , class: "img-fluid" , alt: "" %>
-                            </div>
-                            <div class="col-md-10 col-10">
-                                <div class="">
-                                    <h5 class="card-title01">14 Mins<br>
-                                        Away from the Dubai <br>
-                                        Healthcare City</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 float-end">
-                    <div class="feat">
-                        <div class="row g-0">
-                            <div class="col-md-2 col-2">
-                                 <%=image_tag "cpin.png" , class: "img-fluid" , alt: "" %>
-                            </div>
-                            <div class="col-md-10 col-10">
-                                <div class="">
-                                    <h5 class="card-title01">15 Mins <br>
-                                        Away from the Ras Al Khor <br>
-                                        Wild Sanctuary</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-12">
-                 <%=image_tag "cmap.jpg", width: "1425" , class: "img-fluid", height: "1193" , alt: "" %>
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <div class="col-md-8 float-start">
+            <div class="feat">
+              <div class="row g-0">
+                <div class="col-md-2 col-2">
+                  <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+        </div>
+        <div class="col-md-10 col-10">
+            <div class="">
+                <h5 class="card-title01">16 Mins Away <br>
+                    From Dubai International <br>
+                    Airport</h5>
             </div>
         </div>
     </div>
+</div>
+</div>
+<div class="col-md-8 float-end">
+    <div class="feat">
+        <div class="row g-0">
+            <div class="col-md-2 col-2">
+                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+            </div>
+            <div class="col-md-10 col-10">
+                <div class="">
+                    <h5 class="card-title01">7 Mins<br>
+                        Away from The <br>
+                        Dubai Mall</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-8 float-start">
+    <div class="feat">
+        <div class="row g-0">
+            <div class="col-md-2 col-2">
+                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+            </div>
+            <div class="col-md-10 col-10">
+                <div class="">
+                    <h5 class="card-title01">14 Mins<br>
+                        Away from the Dubai <br>
+                        Healthcare City</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-8 float-end">
+    <div class="feat">
+        <div class="row g-0">
+            <div class="col-md-2 col-2">
+                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+            </div>
+            <div class="col-md-10 col-10">
+                <div class="">
+                    <h5 class="card-title01">15 Mins <br>
+                        Away from the Ras Al Khor <br>
+                        Wild Sanctuary</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-md-6 col-12">
+    <%=image_tag "chictower/map.jpg" , width: "1425" , class: "img-fluid" , height: "1193" , alt: "" %>
+</div>
+</div>
+</div>
 </div>
 
 <div class="theme_spacing">
@@ -535,7 +627,7 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
-                             <%=image_tag "cflr1.png" , width: "1704" , class: "img-fluid", height: "1110" , alt: "" %>
+                            <%=image_tag "chictower/flr1.png" , width: "1704" , class: "img-fluid" , height: "1110" , alt: "" %>
                         </div>
                     </div>
                 </div>
@@ -548,7 +640,7 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
-                             <%=image_tag "cflr2.png" , width: "1704" , class: "img-fluid", height: "1110" , alt: "" %>
+                            <%=image_tag "chictower/flr2.png" , width: "1704" , class: "img-fluid" , height: "1110" , alt: "" %>
                         </div>
                     </div>
                 </div>
@@ -561,7 +653,7 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
-                             <%=image_tag "cflr3.png" , width: "1704" , class: "img-fluid", height: "1110" , alt: "" %>
+                            <%=image_tag "chictower/flr3.png" , width: "1704" , class: "img-fluid" , height: "1110" , alt: "" %>
                         </div>
                     </div>
                 </div>
@@ -574,7 +666,7 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
-                             <%=image_tag "cflr4.png" , width: "1704" , class: "img-fluid", height: "1110" , alt: "" %>
+                            <%=image_tag "chictower/flr4.png" , width: "1704" , class: "img-fluid" , height: "1110" , alt: "" %>
                         </div>
                     </div>
                 </div>
@@ -587,7 +679,7 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
-                             <%=image_tag "cflr5.png" , width: "1704" , class: "img-fluid", height:"1110" , alt: "" %>
+                            <%=image_tag "chictower/flr5.png" , width: "1704" , class: "img-fluid" , height: "1110" , alt: "" %>
                         </div>
                     </div>
                 </div>
@@ -600,7 +692,7 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
-                             <%=image_tag "cflr6.png" , width: "1704" , class: "img-fluid", height: "1110" , alt: "" %>
+                            <%=image_tag "chictower/flr6.png" , width: "1704" , class: "img-fluid" , height: "1110" , alt: "" %>
                         </div>
                     </div>
                 </div>
@@ -613,7 +705,7 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
-                             <%=image_tag "cflr7.png" , width: "1704" , class: "img-fluid" , height:  "1110" , alt: "" %>
+                            <%=image_tag "chictower/flr7.png" , width: "1704" , class: "img-fluid" , height: "1110" , alt: "" %>
                         </div>
                     </div>
                 </div>
@@ -626,7 +718,7 @@
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
-                             <%=image_tag "cflr8.png" , width: "1704" , class: "img-fluid" , height:  "1110" , alt: "" %>
+                            <%=image_tag "chictower/flr8.png" , width: "1704" , class: "img-fluid" , height: "1110" , alt: "" %>
                         </div>
                     </div>
                 </div>
@@ -637,8 +729,28 @@
     </div>
 </div>
 
+
 <div class="ftrbg">
     <div class="container">
+        <%=image_tag "chictower/logo.png", width:"200" , class: "img-fluid" ,  alt: "" %>
+        <p>
+            Chic Tower in collaboration with the famous Swiss Jewelry House de Grisogono, is one of the latest luxury
+            projects launched in Dubai.
+
+            Inspired by the healing properties of turquoise. Chic Tower is where wellness and opulence meet. Here the
+            Fabled
+            fountains of the youth is recast as holistic lifestyle experience which brings together restorative baths,
+            beauty treatments, state of the art gyms, residential luxury, and master jeweler de Grisogono’s unique
+            interpretation of one of the world’s most beloved gemstones.
+        </p>
+        <ul>
+            <li><a href="#"><%=image_tag "chictower/sc1.png" , width: "40" , height: "40" , alt: "" %></a></li>
+            <li><a href="#"><%=image_tag "chictower/sc2.png" , width: "40" , height: "40" , alt: "" %></a></li>
+            <li><a href="#"><%=image_tag "chictower/sc3.png" , width: "40" , height: "40" , alt: "" %></a></li>
+            <li><a href="#"><%=image_tag "chictower/sc4.png" , width: "40" , height: "40" , alt: "" %></a></li>
+            <li><a href="#"><%=image_tag "chictower/sc5.png" , width: "40" , height: "40" , alt: "" %></a></li>
+            <li><a href="#"><%=image_tag "chictower/sc6.png" , width: "40" , height: "40" , alt: "" %></a></li>
+        </ul>
         <p>© 2022 <strong>CHIC TOWER</strong> Real Estate. </p>
     </div>
 </div>
@@ -647,7 +759,7 @@
 
 
 <%=content_for :javascript do%>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
 </script>
