@@ -4,9 +4,89 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 body{font-family: 'Work Sans', sans-serif;} 
 h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
 
+
+
+figure {
+  border-radius:30px;
+  position: relative;
+  border: solid #c49e77 7px;
+  overflow: hidden;
+  display: block;
+  width:100%;
+}
+figure:hover {
+  cursor: pointer;
+}
+figure:hover img {
+  transform: scale(1.2);
+  transition: all 0.4s ease;
+}
+figure:hover .img-overlay {
+  opacity: 0.7;
+  transition: all 0.5s ease;
+}
+figure:hover .overlay-txt {
+  bottom: 60px;
+  font-size: 2rem;
+}
+figure:hover figcaption {
+  left: 0px;
+  opacity: 1;
+  transition: all 0.5s ease;
+  font-size: 2rem;
+}
+
+figure img {
+  margin-bottom: 0;
+  transition: all 0.4s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-overlay {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  background: black;
+  transition: all 0.5s ease;
+}
+
+figcaption {
+  opacity: 0;
+  width: 100%;
+  top: 30%;
+  left: 0;
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.overlay-txt {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-decoration: none;
+  background: #1e1f1f;
+  padding: 10px;
+  margin: -5px 0 0;
+  text-align: center;
+  font-size:1rem;
+  color: #fff;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+.overlay-txt:hover{color:#fff;}
+
 .theme_spacing{ margin:5% 0 3% 0px;}
 
-.herobg{background: url("jherobg.jpg") no-repeat center -200px;padding:5% 0px;background-size:cover!important;}
+.herobg{background: url("jumeriah/herobg.jpg") no-repeat center -200px;padding:5% 0px;background-size:cover!important;}
 .logo{ text-align:center; margin:15px 0}
 .slogan{text-align: left;} 
 .slogan h2{ font-size:50px; color: #fff; font-weight:900; line-height: normal}
@@ -26,11 +106,20 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
 
 .form-control:focus {
     color: #C49E77!important;
-  background-color: rgba(0, 0, 0, 0.8)!important;
-	backdrop-filter: blur(50px);
+    background-color: transparent!important;
+    backdrop-filter: blur(50px);
     border-color:transparent!important;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgb(13, 110, 253 / 25%);
+    box-shadow: 0, 0, 0, 0.25rem rgb(13, 110, 253 / 25%);
+}
+
+.form-control00:focus {
+    color: #434343!important;
+    background-color: transparent!important;
+    backdrop-filter: blur(50px);
+    border-color:transparent!important;
+    outline: 0;
+    box-shadow: 0, 0, 0, 0.25rem rgb(13, 110, 253 / 25%);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -105,11 +194,16 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
 .floor_plan{ text-align: center; background:#FF5A5F; padding: 30px; border-radius: 30px;}
 .floor_plan h5{color: #fff;margin: 0px 0 15px 0px;font-size:18px;font-weight: bold;}
 
-.inner_data{ margin:30px 0;}
-.ftrbg{ background:#C49E77; color: #fff; font-size: 20px; font-weight: normal; border-radius:30px 30px 0 0;  text-align: center; padding:15px 0;}
+.inner_data{ margin:30px 0;} 
+.ftrbg{background: #C49E77; padding:30px 0; text-align: center;} 
+.ftrbg img{ margin: 0 0 15px 0px;}
+.ftrbg p{ color: #fff;font-size:14px;font-weight: normal; padding:10px 0;}
+.ftrbg ul{ margin:10px 0; padding: 0px;}
+.ftrbg ul li{ display: contents;}
+.ftrbg ul li img{margin:0 6px;}
 
-.plaza{ background:url("jplz1.png") no-repeat center top; background-size:cover; margin:30px 0px;  padding: 30px; border-radius:30px;}
-.plaza01{ background:url("jplz2.png") no-repeat center top; background-size:cover; margin:30px 0px;  padding: 30px; border-radius:30px;}
+.plaza{ background:url("jumeriah/plz1.png") no-repeat center top; background-size:cover; margin:30px 0px;  padding: 30px; border-radius:30px;}
+.plaza01{ background:url("jumeriah/plz2.png") no-repeat center top; background-size:cover; margin:30px 0px;  padding: 30px; border-radius:30px;}
 .plaza_text{	background-color:#fff;
 	/*backdrop-filter: blur(50px);*/ padding:10px; border-radius:30px; padding: 30px; color: #434343; font-size: 20px; font-weight: normal;}
 .plaza_text h4{ font-size:38px; color:#C49E77; font-weight: bold; border-bottom: solid 2px #C49E77;}
@@ -148,6 +242,23 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
     }
     /* different techniques for iPad screening */
     @media only screen and (min-device-width:320px) and (max-device-width: 480px) and (orientation:portrait) {
+		
+		figure {
+    border-radius: 30px;
+    position: relative;
+    border: solid #c49e77 7px;
+    overflow: hidden;
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+}
+		.slogan {
+    text-align: center;
+}
+		.herobg {
+    background: url(jumeriah/herobg.jpg) no-repeat center -200px;
+    padding: 5% 0px; background-size: auto!important;
+}
 		.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #f15c62;
     background-color: #fff;
@@ -172,7 +283,7 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
 		.spec {
     padding: 20px 15px!important;
     border-radius: 8px;
-    background-color: rgb(74, 56, 35);
+    background-color: rgb(74 56 35);
     backdrop-filter: blur(10px);
     padding: 8px;
     margin: 0 0 15px 0;
@@ -226,6 +337,8 @@ h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
       /* For landscape layouts only */
 		
     }
+
+         
 
     .iti.iti--allow-dropdown{
       display: block;
