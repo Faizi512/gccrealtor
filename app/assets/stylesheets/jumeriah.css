@@ -765,56 +765,53 @@ figcaption {
 
   .card-title {
     color: #fff;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0px;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0px;
   }
 
-  
+  .cst_input {
+
+    margin: 0 0 15px 0;
+  }
+
+  .search_form h6 {
+    text-align: center;
+    margin: 0 0 15px 0px;
+    font-size: 17px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .slogan p {
+    font-size: 15px;
+    color: #fff;
+    margin: 5px 0 10px 0px;
+    font-weight: normal;
+    line-height: normal;
+  }
+
+  .slogan h2 {
+    font-size: 17px;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: normal;
+    margin: 5px 0 0 0;
+  }
+
+  .slogan h5 {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #FF5A5F;
+    display: unset;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+
 }
-
-.cst_input {
-
-  margin: 0 0 15px 0;
-}
-
-.search_form h6 {
-  text-align: center;
-  margin: 0 0 15px 0px;
-  font-size: 17px;
-  color: #fff;
-  font-weight: bold;
-}
-
-.slogan p {
-  font-size: 15px;
-  color: #fff;
-  margin: 5px 0 10px 0px;
-  font-weight: normal;
-  line-height: normal;
-}
-
-.slogan h2 {
-  font-size: 17px;
-  color: #fff;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: normal;
-  margin: 5px 0 0 0;
-}
-
-.slogan h5 {
-  font-size: 14px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  background: #FF5A5F;
-  display: unset;
-  padding: 4px 8px;
-  border-radius: 5px;
-}
-
-
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
   /* For landscape layouts only */

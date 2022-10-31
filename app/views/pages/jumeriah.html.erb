@@ -3,14 +3,13 @@
 <%= stylesheet_link_tag 'jumeriah' %>
 <%= stylesheet_link_tag 'carousel', media: 'all', 'data-turbolinks-track': 'reload' %>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-</script>
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
 <%end%>
 
 <div class="herobg">
     <div class="container">
         <div class="bnr">
-            <div class="row">
+            <div class="row" id="lead_form">
                 <div class="col-md-8 col-12">
                     <div class="slogan">
                         <%=image_tag "jumeriah/logo.png" , width: "150" , class: "img-fluid mb-2" , height: "130" , alt: "" %>
@@ -27,7 +26,7 @@
                     <div class="search_form">
                         <div class="search_form01">
                             <h6>Register your Interest to avail the best offers</h6>
-                            <form action="/submit_lead" method="POST">
+                            <form action="/submit_lead" method="POST" >
                             <div class="row">
                                 <div class="mb-3">
                                     <input class="form-control form-control-lg cst_input" type="text" name="first_name"
@@ -287,7 +286,7 @@
 
 
                     </p>
-                    <button class="btn cstbtn mt-4" type="button">Register your Interest</button>
+                    <a class="btn cstbtn mt-4" href="#lead_form">Register your Interest</a>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -312,7 +311,7 @@
                             Khalifa.
 
                         </p>
-                        <button class="btn cstbtn mt-4" type="button">Register your Interest</button>
+                        <a class="btn cstbtn mt-4" href="#lead_form">Register your Interest</a>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -494,7 +493,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
 </script>
-<%=javascript_pack_tag "slider" %>
+<%= javascript_pack_tag "slider" %>
 <%= javascript_pack_tag 'form', 'data-turbolinks-track': 'reload' %>
 
 
