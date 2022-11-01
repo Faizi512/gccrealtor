@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="search_form">
-                        <h6>Register your Interest to avail the best offers</h6>
+                        <h6>Download Brochure</h6>
                         <form action="/submit_lead" method="POST">
                             <div class="mb-3">
                                 <input class="form-control form-control-lg cst_input" type="text"
@@ -36,8 +36,8 @@
                                     placeholder="Last Name" aria-label="Full Name" name="last_name">
                             </div>
                             <div class="mb-3">
-                                <input class="form-control form-control-lg cst_input" type="text" placeholder="Email" name="email"
-                                    aria-label="Email">
+                                <input class="form-control form-control-lg cst_input" type="text" placeholder="Email"
+                                    name="email" aria-label="Email">
                             </div>
                             <div class="mb-3">
                                 <div class="change-country"></div>
@@ -58,7 +58,7 @@
                                 <input type="hidden" name="phonelocal" value="12345678">
                                 <input type="hidden" name="project1" value="chictower">
                             </div>
-                            <div class="d-grid gap-2"> <button class="btn cstbtn" type="submit">SUBMIT</button>
+                            <div class="d-grid gap-2"> <button class="btn cstbtn" type="submit">Download Now</button>
                             </div>
                         </form>
                     </div>
@@ -145,10 +145,6 @@
     </div>
 </div>
 
-<div class="col-md-6 col-12 text-center ms-auto me-auto">
-<a href="#form" class="btn cstbtn01" style="background: #F15C62;color:white">REGISTER YOUR INTEREST</a>
-</div>
-
 <div class="theme_spacing">
     <div class="container">
         <div class="about">
@@ -198,20 +194,21 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body pb-5">
+                                <form action="/submit_lead" method="POST">
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="mb-3">
                                             <span for="exampleFormControlInput1" class="form-label">First Name</span>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="First Name">
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="First Name" name="first_name">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6 col-12">
                                         <div class="mb-3">
                                             <span for="exampleFormControlInput1" class="form-label">Last Name</span>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="Last Name">
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Last Name" name="last_name">
                                         </div>
                                     </div>
 
@@ -219,21 +216,37 @@
                                         <div class="mb-3">
                                             <span for="exampleFormControlInput1" class="form-label">Email</span>
                                             <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="Email">
+                                                placeholder="Email" name="email">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6 col-12">
                                         <div class="mb-3">
                                             <span for="exampleFormControlInput1" class="form-label">Phone Number</span>
-                                            <input type="tel" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="Phone Number">
+                                            <div class="change-country"></div>
+                                            <input placeholder="Phone No" name="phone"
+                                                class="phonecode form-control
+                                                data-parsley-required="true"
+                                                data-parsley-required-message="Please Enter Valid Phone Number"
+                                                data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                                type="tel" required>
+                                            <div class="phoneerror"></div>
+                                            <input type="hidden" value="apartments" name="propertytype">
+                                            <input id='inp1' value="Idontknowyet" type='hidden' name='area'>
+                                            <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>
+                                            <input id='inp18' name="purchasepurpose" value="Personal Use" type='hidden'>
+                                            <input type="hidden" name="sid" value="1">
+                                            <input type="hidden" name="project" value="CHIC Tower De GRISOGONO Geneve">
+                                            <input type="hidden" id="phonecode" name="phonecode" value="+44">
+                                            <input type="hidden" name="phonelocal" value="12345678">
+                                            <input type="hidden" name="project1" value="chictower">
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="d-grid gap-2 col-6 mx-auto">
-                                        <button class="btn btn-dark" type="button">Register Now</button>
+                                        <button class="btn btn-dark" type="submit">Register Now</button>
                                     </div>
+                                    </form>
 
                                 </div>
                             </div>
@@ -290,8 +303,9 @@
                         Your home boasts sweeping panoramas of Dubai’s Iconic Canal and beyond, allowing <br><br>
 
                         you to revitalize your perspective on life, everytime you look out of your window.</p>
-                        <a href="#form" class="btn cstbtn01" style="background: #F15C62;color:white">REGISTER YOUR INTEREST</a>
-                        </div>
+                    <a href="#form" class="btn cstbtn01" style="background: #F15C62;color:white">REGISTER YOUR
+                        INTEREST</a>
+                </div>
             </div>
         </div>
     </div>
@@ -485,112 +499,116 @@
         <div class="col-md-4 col-12">
             <a class="spotlight" href="images/gl1.jpg">
                 <%=image_tag "chictower/gl1.jpg"%>
-        </a>
-      </div>
-      <div class="col-md-4 col-12">
-        <a class="spotlight" href="images/gl2.jpg">
-          <%=image_tag "chictower/gl2.jpg"%>
-        </a>
-        <a class="spotlight" href="images/gl3.jpg">
-          <%=image_tag "chictower/gl3.jpg"%>
-        </a>
-      </div>
-      <div class="col-md-4 col-12">
-        <a class="spotlight" href="images/gl4.jpg">
-          <%=image_tag "chictower/gl4.jpg"%>
-        </a>
-      </div>
-      <div class="col-md-6 col-12">
-        <a class="spotlight" href="images/gl5.jpg">
-          <%=image_tag "chictower/gl5.jpg"%>
-        </a>
-      </div>
-      <div class="col-md-6 col-12">
-        <a class="spotlight" href="images/gl6.jpg">
-          <%=image_tag "chictower/gl6.jpg"%>
-        </a>
-      </div>
-    </div>
-
-
-
-
-  </div>
-
-  <div class="theme_spacing">
-    <div class="container">
-      <div class="row">
+            </a>
+        </div>
+        <div class="col-md-4 col-12">
+            <a class="spotlight" href="images/gl2.jpg">
+                <%=image_tag "chictower/gl2.jpg"%>
+            </a>
+            <a class="spotlight" href="images/gl3.jpg">
+                <%=image_tag "chictower/gl3.jpg"%>
+            </a>
+        </div>
+        <div class="col-md-4 col-12">
+            <a class="spotlight" href="images/gl4.jpg">
+                <%=image_tag "chictower/gl4.jpg"%>
+            </a>
+        </div>
         <div class="col-md-6 col-12">
-          <div class="col-md-8 float-start">
-            <div class="feat">
-              <div class="row g-0">
-                <div class="col-md-2 col-2">
-                  <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+            <a class="spotlight" href="images/gl5.jpg">
+                <%=image_tag "chictower/gl5.jpg"%>
+            </a>
         </div>
-        <div class="col-md-10 col-10">
-            <div class="">
-                <h5 class="card-title01">16 Mins Away <br>
-                    From Dubai International <br>
-                    Airport</h5>
-            </div>
+        <div class="col-md-6 col-12">
+            <a class="spotlight" href="images/gl6.jpg">
+                <%=image_tag "chictower/gl6.jpg"%>
+            </a>
         </div>
     </div>
+
+
+
+
 </div>
-</div>
-<div class="col-md-8 float-end">
-    <div class="feat">
-        <div class="row g-0">
-            <div class="col-md-2 col-2">
-                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
-            </div>
-            <div class="col-md-10 col-10">
-                <div class="">
-                    <h5 class="card-title01">7 Mins<br>
-                        Away from The <br>
-                        Dubai Mall</h5>
+
+<div class="theme_spacing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="col-md-8 float-start">
+                    <div class="feat">
+                        <div class="row g-0">
+                            <div class="col-md-2 col-2">
+                                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+                            </div>
+                            <div class="col-md-10 col-10">
+                                <div class="">
+                                    <h5 class="card-title01">16 Mins Away <br>
+                                        From Dubai International <br>
+                                        Airport</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 float-end">
+                    <div class="feat">
+                        <div class="row g-0">
+                            <div class="col-md-2 col-2">
+                                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+                            </div>
+                            <div class="col-md-10 col-10">
+                                <div class="">
+                                    <h5 class="card-title01">7 Mins<br>
+                                        Away from The <br>
+                                        Dubai Mall</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 float-start">
+                    <div class="feat">
+                        <div class="row g-0">
+                            <div class="col-md-2 col-2">
+                                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+                            </div>
+                            <div class="col-md-10 col-10">
+                                <div class="">
+                                    <h5 class="card-title01">14 Mins<br>
+                                        Away from the Dubai <br>
+                                        Healthcare City</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="col-md-8 float-end">
+                    <div class="feat">
+                        <div class="row g-0">
+                            <div class="col-md-2 col-2">
+                                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
+                            </div>
+                            <div class="col-md-10 col-10">
+                                <div class="">
+                                    <h5 class="card-title01">15 Mins <br>
+                                        Away from the Ras Al Khor <br>
+                                        Wild Sanctuary</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#form" class="btn btn-lg bg-primary text-white" type="button">Download Brochure</a>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<div class="col-md-8 float-start">
-    <div class="feat">
-        <div class="row g-0">
-            <div class="col-md-2 col-2">
-                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
-            </div>
-            <div class="col-md-10 col-10">
-                <div class="">
-                    <h5 class="card-title01">14 Mins<br>
-                        Away from the Dubai <br>
-                        Healthcare City</h5>
-                </div>
+            <div class="col-md-6 col-12">
+                <%=image_tag "chictower/map.jpg" , width: "1425" , class: "img-fluid" , height: "1193" , alt: "" %>
             </div>
         </div>
     </div>
-</div>
-<div class="col-md-8 float-end">
-    <div class="feat">
-        <div class="row g-0">
-            <div class="col-md-2 col-2">
-                <%=image_tag "chictower/pin.png" , class: "img-fluid" , alt: "" %>
-            </div>
-            <div class="col-md-10 col-10">
-                <div class="">
-                    <h5 class="card-title01">15 Mins <br>
-                        Away from the Ras Al Khor <br>
-                        Wild Sanctuary</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="col-md-6 col-12">
-    <%=image_tag "chictower/map.jpg" , width: "1425" , class: "img-fluid" , height: "1193" , alt: "" %>
-</div>
-</div>
-</div>
 </div>
 
 <div class="theme_spacing">
@@ -624,7 +642,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>Studio. Type 1</h5>
-                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
+                                <a href="#form" class="btn cstbtn01" type="button">Download Floor Plan</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -637,7 +655,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>Studio. Type 2</h5>
-                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
+                                <a href="#form" class="btn cstbtn01" type="button">Download Floor Plan</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -650,7 +668,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>Studio. Type 3</h5>
-                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
+                                <a href="#form" class="btn cstbtn01" type="button">Download Floor Plan</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -663,7 +681,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>1 Bedroom. Type 1</h5>
-                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
+                                <a href="#form" class="btn cstbtn01" type="button">Download Floor Plan</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -676,7 +694,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>1 Bedroom. Type 2</h5>
-                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
+                                <a href="#form" class="btn cstbtn01" type="button">Download Floor Plan</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -689,7 +707,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>1 Bedroom. Type 3</h5>
-                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
+                                <a href="#form" class="btn cstbtn01" type="button">Download Floor Plan</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -702,7 +720,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>2 Bedroom. Type 1</h5>
-                                <a href="#form" class="btn cstbtn01" type="button">REGISTER YOUR INTEREST</a>
+                                <a href="#form" class="btn cstbtn01" type="button">Download Floor Plan</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">
@@ -715,7 +733,7 @@
                         <div class="col-md-3 col-12">
                             <div class="floor_plan">
                                 <h5>2 Bedroom. Type 2</h5>
-                                <a class="btn cstbtn01" href="#form" type="button">REGISTER YOUR INTEREST</a>
+                                <a class="btn cstbtn01" href="#form" type="button">Download Floor Plan</a>
                             </div>
                         </div>
                         <div class="col-md-9 col-12">

@@ -15,7 +15,6 @@
                         <%=image_tag "jumeriah/logo.png" , width: "150" , class: "img-fluid mb-2" , height: "130" , alt: "" %>
                         <h2>Jumeirah Living<br>Business Bay</h2>
                         <p>
-
                             Luxury Waterfront Homes <br>in Business Bay with stunning views <br>of Dubai Water Canal &
                             Downtown
                             <br>Dubai Skyline
@@ -25,7 +24,7 @@
                 <div class="col-md-4 col-12">
                     <div class="search_form">
                         <div class="search_form01">
-                            <h6>Register your Interest to avail the best offers</h6>
+                            <h6>Download Brochure</h6>
                             <form action="/submit_lead" method="POST" >
                             <div class="row">
                                 <div class="mb-3">
@@ -59,7 +58,7 @@
                                 <input type="hidden" id="phonecode" name="phonecode" value="+44">
                                 <input type="hidden" name="phonelocal" value="12345678">
                                 <input type="hidden" name="project1" value="jumeriah">
-                                <div class="d-grid gap-2"> <button class="btn cstbtn" type="submit">SUBMIT</button>
+                                <div class="d-grid gap-2"> <button class="btn cstbtn" type="submit">Download Now</button>
                                 </div>
                             </div>
                             </form>
@@ -160,8 +159,6 @@
                 <div class="abt_th">
                     <h5>Luxury Waterfront Homes in Business Bay</h5>
                     <p>
-
-
                         Inspired by its location’s maritime lifestyle and nautical elements, Jumeirah Living Business
                         Bay sits on
                         a fine line between art and architecture, in constant dialogue with the shimmering light and
@@ -195,7 +192,7 @@
                                 <div class="col-md-6 col-12">
                                     <div class="mb-3">
                                         <span for="exampleFormControlInput1" class="form-label">First Name</span>
-                                        <input type="email" class="form-control form-control00"
+                                        <input type="text" class="form-control form-control00"
                                             id="exampleFormControlInput1" placeholder="First Name">
                                     </div>
                                 </div>
@@ -203,7 +200,7 @@
                                 <div class="col-md-6 col-12">
                                     <div class="mb-3">
                                         <span for="exampleFormControlInput1" class="form-label">Last Name</span>
-                                        <input type="email" class="form-control form-control00"
+                                        <input type="text" class="form-control form-control00"
                                             id="exampleFormControlInput1" placeholder="Last Name">
                                     </div>
                                 </div>
@@ -217,12 +214,27 @@
                                 </div>
 
                                 <div class="col-md-6 col-12">
-                                    <div class="mb-3">
+                                    <div class="mb-3" >
                                         <span for="exampleFormControlInput1" class="form-label">Phone Number</span>
-                                        <input type="tel" class="form-control form-control00"
-                                            id="exampleFormControlInput1" placeholder="Phone Number">
+                                        <div class="change-country"></div>
+                                        <input placeholder="Phone No"  name="phone"
+                                            class="phonecode form-control form-control00"
+                                            data-parsley-required="true"
+                                            data-parsley-required-message="Please Enter Valid Phone Number"
+                                            data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                            type="tel" required="">
+                                        <div class="phoneerror"></div>
                                     </div>
                                 </div>
+                                <input type="hidden" value="apartments" name="propertytype">
+                                <input id='inp1' value="Idontknowyet" type='hidden' name='area'>
+                                <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>
+                                <input id='inp18' name="purchasepurpose" value="Personal Use" type='hidden'>
+                                <input type="hidden" name="sid" value="1">
+                                <input type="hidden" name="project" value="Jumeirah Living Business Bay">
+                                <input type="hidden" id="phonecode" name="phonecode" value="+44">
+                                <input type="hidden" name="phonelocal" value="12345678">
+                                <input type="hidden" name="project1" value="jumeriah">
                                 <div class="clearfix"></div>
                                 <div class="d-grid gap-2 col-6 mx-auto">
                                     <button class="btn btn-dark" type="button">Register Now</button>
@@ -276,7 +288,6 @@
                 <div class="float-start plaza_text">
                     <h4>NEW ElEVATION TO BRANDED RESIDENCES</h4><br>
                     <p>
-
                         Designed for the discerning, the exquisitely crafted four and five-bedroom simplex and duplex
                         penthouses
                         are destined to elevate living in the sky to an entirely new plethora, with superior detailed
@@ -284,10 +295,8 @@
                         <br><br>ultra-premium appointments and a design that maximises the breathtaking views of the
                         Dubai Canal
                         and Downtown Dubai skyline.
-
-
                     </p>
-                    <a class="btn cstbtn mt-4" href="#lead_form">Register your Interest</a>
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn cstbtn mt-4">Check Available Units & Prices</a>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -312,7 +321,7 @@
                             Khalifa.
 
                         </p>
-                        <a class="btn cstbtn mt-4" href="#lead_form">Register your Interest</a>
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn cstbtn mt-4">Check Available Units & Prices</a>
                     </div>
                 </div>
                 <div class="clearfix"></div>
