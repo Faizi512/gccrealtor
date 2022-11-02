@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "/thankyou", to: "pages#thankyou"
   get "/peninsula", to: "pages#peninsula"
   post "/submit_lead", to: "pages#submit_lead"
-  post "/download_brocher", to: "pages#download_brocher"
+  get "/download_brocher", to: "pages#download_brocher"
 end

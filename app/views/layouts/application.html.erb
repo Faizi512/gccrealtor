@@ -7,7 +7,6 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%=yield :css%>
 
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
@@ -43,6 +42,8 @@
 
   gtag('config', 'UA-247065150-1');
 </script>
+<%=yield :css%>
+
 </head>
 
 <body>
@@ -50,6 +51,13 @@
 
 
   <%=yield :javascript%>
+
+    <script>
+    window.addEventListener('load', (event) => {
+      window.scrollTo(0, 0);
+    });
+       
+    </script>
 
 
 </body>
