@@ -26,8 +26,8 @@ class PagesController < ApplicationController
     end
 
     def download_brocher
-        if params[:project] != "Generic"
-            send_data(
+        if !params[:project1].blank?
+            send_file(
             "#{Rails.root}/pdf/#{params[:project1]}.pdf",
             filename: "#{params[:project1]}.pdf",
             type: "application/pdf",
