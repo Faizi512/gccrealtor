@@ -58,7 +58,11 @@
     });
        
     </script>
-
+    <% if !params[:project1].blank? %>
+      <script>
+        window.location = window.location.origin + '<%="/download_brocher?project=#{params[:project]}&project1=#{params[:project1]}" %>'
+      </script>
+    <%end%>
 
 </body>
 
