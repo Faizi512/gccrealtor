@@ -30,7 +30,7 @@ class PagesController < ApplicationController
             "#{Rails.root}/pdf/#{params[:project1]}.pdf",
             filename: "#{params[:project1]}.pdf",
             type: "application/pdf",
-            disposition: "attachment"
+            disposition: "inline"
             )
         end
     end
