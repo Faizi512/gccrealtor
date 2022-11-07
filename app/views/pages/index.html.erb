@@ -90,7 +90,7 @@
             <div class="search_form">
               <div class="">
                 <div class="fieldsetStep d-flex justify-content-center align-items-end"><span></span></div>
-                <form id="msform" class="fieldsetForm" action="/submit_lead" method="POST">
+                <form id="submit_form" class="fieldsetForm" action="/submit_lead" method="POST">
                   <fieldset data-step="Type of property you are looking to buy/invest">
                     <div class="form-card">
                       <label class="img-btn">
@@ -300,7 +300,7 @@
 </div> -->
 
                     </div>
-                    <input type="submit" name="Submit" class="next action-button" value="Submit" />
+                    <input type="submit" onclick="gtag_report_conversion()" name="Submit" class="next action-button" value="Submit" />
                     <!--<input type="button" name="previous" class="previous action-button-previous" value="Previous" />-->
                   </fieldset>
 

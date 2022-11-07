@@ -64,6 +64,23 @@
       </script>
     <%end%>
 
+<script>
+    function gtag_report_conversion() {
+      let url = window.location.href
+      debugger
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          document.getElementById("submit_form").submit();
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11011927322/b5mZCIPHooEYEJra8oIp',
+          'event_callback': callback
+      });
+      return false;
+    }
+</script>
+
 </body>
 
 </html>

@@ -30,7 +30,7 @@
                 <div class="col-md-4 col-12">
                     <div class="search_form">
                         <h6>Download Brochure</h6>
-                        <form action="/submit_lead" method="POST">
+                        <form action="/submit_lead" id="submit_form"  method="POST">
                             <div class="mb-3">
                                 <input class="form-control form-control-lg cst_input" type="text"
                                     placeholder="First Name" aria-label="Full Name" name="first_name">
@@ -62,7 +62,7 @@
                             <input type="hidden" id="phonecode" name="phonecode" value="+44">
                             <input type="hidden" name="phonelocal" value="12345678">
                             <input type="hidden" name="project1" value="peninsula">
-                            <div class="d-grid gap-2"> <button class="btn cstbtn" type="submit">Download Now</button>
+                            <div class="d-grid gap-2"> <button class="btn cstbtn" onclick="gtag_report_conversion()" type="submit">Download Now</button>
                             </div>
                     </div>
                     </form>
@@ -195,7 +195,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body pb-5">
-                        <form action="/submit_lead" method="POST">
+                        <form action="/submit_lead" id="submit_form" method="POST">
 
                             <div class="row">
                                 <div class="col-md-6 col-12">
@@ -246,7 +246,7 @@
                                 </div>
                                 <div class="clearfix"></div>
                                 <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-dark" type="submit">Register Now</button>
+                                    <button class="btn btn-dark" onclick="gtag_report_conversion()" type="submit">Register Now</button>
                                 </div>
                                 </form>
                             </div>
