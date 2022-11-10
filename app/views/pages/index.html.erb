@@ -12,16 +12,16 @@
 <%end%>
 
 <div class="herobgslider">
-  <div class="container-fluid p-0">
-    <div id="carousel" class="carousel slide hero-slides" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li class="active" data-target="#carousel" data-slide-to="0"></li>
-        <li data-target="#carousel" data-slide-to="1"></li>
-        <li data-target="#carousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active boat">
-          <!--          <div class="container h-100 d-md-block">
+		<div class="container-fluid p-0">
+			<div id="carousel" class="carousel slide hero-slides" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li class="active" data-target="#carousel" data-slide-to="0"></li>
+					<li data-target="#carousel" data-slide-to="1"></li>
+					<li data-target="#carousel" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active boat">
+						<!--          <div class="container h-100 d-md-block">
             <div class="row align-items-center h-100">
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="caption animated fadeIn">
@@ -32,9 +32,9 @@
               </div>
             </div>
           </div>-->
-        </div>
-        <div class="carousel-item sea">
-          <!--          <div class="container h-100 d-md-block">
+					</div>
+					<div class="carousel-item sea">
+						<!--          <div class="container h-100 d-md-block">
             <div class="row align-items-center h-100">
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="caption animated fadeIn">
@@ -45,9 +45,9 @@
               </div>
             </div>
           </div>-->
-        </div>
-        <div class="carousel-item river">
-          <!--          <div class="container h-100 d-md-block">
+					</div>
+					<div class="carousel-item river">
+						<!--          <div class="container h-100 d-md-block">
             <div class="row align-items-center h-100">
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="caption animated fadeIn">
@@ -58,9 +58,9 @@
               </div>
             </div>
           </div>-->
-        </div>
-      </div>
-      <!--      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+					</div>
+				</div>
+				<!--      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
@@ -68,574 +68,549 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>-->
-    </div>
-  </div>
+			</div>
+		</div>
 
-  <div class="slider_text">
-    <div class="theme_spacing">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-12">
-            <div class="slogan">
-              <%=image_tag "logo-web.png", width: "150" , alt: "" %>
-              <h2>Looking To Buy/Invest In Luxury Property in Dubai?</h2>
-              <p>
-                Own Exclusive Property For As Low As 500,000 AED With Returns Up To 10% Annually
-              </p>
+		<div class="slider_text">
+			<div class="theme_spacing">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-12">
+							<div class="slogan">
+								<%=image_tag "logo-web.png" , width: "150" , alt: ""  %>
+								<h2>Looking To Buy/Invest In Luxury Property in Dubai?</h2>
+								<p>
+									Own Exclusive Property for as low as 200,000 AED with returns up to 10%
+								</p>
 
-            </div>
-          </div>
-          <div class="col-md-6 col-12">
-            <h5 class="form_text">Find your Dream property now in less than 60 seconds</h5>
-            <div class="search_form">
-              <div class="">
-                <div class="fieldsetStep d-flex justify-content-center align-items-end"><span></span></div>
-                <form id="submit_form" class="fieldsetForm" action="/submit_lead" method="POST">
-                  <fieldset data-step="Type of property you are looking to buy/invest">
-                    <div class="form-card">
-                      <label class="img-btn">
-                        <input type="radio" value="residence" name="propertytype" checked>
-                        <%=image_tag "fop1.png", width: "180", class: "size",  alt: "Residences" %>
-                      </label>
+							</div>
+						</div>
+						<div class="col-md-6 col-12">
+							<h5 class="form_text">Find your Dream property now in<br>less than 60 seconds</h5>
+							<div class="search_form">
+								<div class="">
+									<div class="fieldsetStep d-flex justify-content-center align-items-end">
+										<span></span></div>
+									<form id="msform" class="fieldsetForm"  action="/submit_lead" method="POST">
+										<fieldset data-step="Type of property you are looking to buy/invest">
+											<div class="form-card">
+												<label class="img-btn">
+													<input type="radio" value="residence" name="propertytype"  checked>
+													<%=image_tag "fop1.png" , width: "200", class: "size", 
+														alt: "Residences" %>
+												</label>
 
-                      <label class="img-btn">
-                        <input type="radio" name="propertytype" value="full-floor-penthouse">
-                        <%=image_tag "fop2.png", width: "180" ,  class: "size" , alt: "Full Floor Penthouse" %>
-                      </label>
+												<label class="img-btn">
+													<input type="radio" name="propertytype" value="full-floor-penthouse">
+													<%=image_tag "fop2.png" , width: "200", class: "size",
+														alt: "Full Floor Penthouse" %>
+												</label>
 
-                      <label class="img-btn">
-                        <input type="radio" name="propertytype" value="villa/townhouse">
-                        <%=image_tag "fop3.png", width: "180" , class: "size" , alt: "Villa / Townhouse" %>
-                      </label>
-                      <input type="hidden" name="sid" value="1">
+												<label class="img-btn">
+													<input type="radio" name="propertytype" value="villa/townhouse">
+													<%=image_tag "fop3.png" , width: "200", class: "size",
+														alt: "Villa / Townhouse" %>
+												</label>
+                        <input type="hidden" name="sid" value="1">
                       <input type="hidden" name="project" value="Generic">
                       <input type="hidden" id="phonecode" name="phonecode" value="+44">
                       <input type="hidden" name="phonelocal" value="12345678">
                       <input type="hidden" name="project1" value="">
-                    </div> <input type="button" name="next" class="next action-button" value="Next" />
-                  </fieldset>
-                  <fieldset data-step="How Many Bedrooms you are looking for?">
-                    <div class="form-card">
-                      <div class="row">
-                        <div class="col-md-6 col-6">
-                          <table class="text-left">
+											</div> <input type="button" name="next" class="next action-button"
+												value="Next" />
+										</fieldset>
+										<fieldset data-step="How Many Bedrooms you are looking for?">
+											<div class="form-card">
+												<div class="row">
+													<div class="col-md-6 col-6">
 
-                            <tr>
-                              <td>
-                                <input id='inp1' value="studio" type='checkbox' name='bedrooms[]'>
-                              </td>
-                              <td>
-                                <label for='inp1'>Studio</label>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <input id='inp2' value="1-2 Bedroom" type='checkbox' name='bedrooms[]'>
+														<div class="checkbox block">
+															<input type="checkbox" id="checkbox1" value="studio" name='bedrooms[]'>
+															<label for="checkbox1" >Studio</label>
 
-                              </td>
-                              <td>
-                                <label for='inp2'>1-2 Bedroom</label>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                        <div class="col-md-6 col-6">
-                          <table class="text-left">
 
-                            <tr>
-                              <td>
-                                <input id='inp3' value="2-3 Bedroom" type='checkbox' name='bedrooms[]'>
-                              </td>
-                              <td>
-                                <label for='inp3'>2-3 Bedroom</label>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <input id='inp4' value="3+ Bedroom" type='checkbox' name='bedrooms[]'>
-                              </td>
-                              <td>
-                                <label for='inp4'>3+ Bedroom</label>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                    <input type="button" name="next" class="next action-button" value="Next" /> <input type="button"
-                      name="previous" class="previous action-button-previous" value="Previous" />
-                  </fieldset>
-                  <fieldset data-step="What is your budget approx">
-                    <div class="form-card">
-                      <div class="row">
-                        <div class="col-md-6 col-6">
-                          <table class="text-left">
 
-                            <tr>
-                              <td>
-                                <input id='inp13' type='radio' value="Below AED 1,000.000" name='budget'>
-                              </td>
-                              <td>
-                                <label for='inp13'> Below AED 1,000.000</label>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <input id='inp14' type='radio' value="AED 2,000.000 - 5,000.000" name='budget'>
+														</div>
+														<div class="checkbox block">
+															<input value="1-2 Bedroom" type='checkbox' name='bedrooms[]' id="checkbox2">
+															<label for="checkbox2">1-2 Bedroom</label>
+														</div>
+														 
+													</div>
+													<div class="col-md-6 col-6">
+														<div class="checkbox block">
+															<input value="2-3 Bedroom" type='checkbox' name='bedrooms[]' id="checkbox7">
+															<label for="checkbox7">2-3 Bedroom</label>
+														</div>
+														<div class="checkbox block">
+															<input value="3+ Bedroom" type='checkbox' name='bedrooms[]' id="checkbox8">
+															<label for="checkbox8">3+ Bedroom</label>
+														</div>
+														
 
-                              </td>
-                              <td>
-                                <label for='inp14'>AED 2,000.000 - 5,000.000</label>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <input id='inp15' type='radio' value="More than AED 10,000.000" name='budget'>
-                              </td>
-                              <td>
-                                <label for='inp15'>More than AED 10,000.000</label>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                        <div class="col-md-6 col-6">
-                          <table class="text-left">
 
-                            <tr>
-                              <td>
-                                <input id='inp16' type='radio' value="AED 1,000.000 - 2,000.000" name='budget'>
+													</div>
+												</div>
+											</div>
+											<input type="button" name="next" class="next action-button" value="Next" />
+											<input type="button" name="previous" class="previous action-button-previous"
+												value="Previous" />
+										</fieldset>
+										<fieldset data-step="What is your budget approx">
+											<div class="form-card">
+												<div class="row">
+													<div class="col-md-6 col-12">
+														<table class="text-left">
 
-                              </td>
-                              <td>
-                                <label for='inp16'>AED 1,000.000 - 2,000.000</label>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <input id='inp17' type='radio' value="AED 5,000.000 - 10,000.000" name='budget'>
+															<tr>
+																<td>
+																	<input id='inp13' type='radio' value="Below AED 1,000.000" name='budget'>
+																</td>
+																<td>
+																	<label for='inp13'> Below AED 1,000.000</label>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<input id='inp14' type='radio' value="AED 2,000.000 - 5,000.000" name='budget'>
 
-                              </td>
-                              <td>
-                                <label for='inp17'>AED 5,000.000 - 10,000.000</label>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
+																</td>
+																<td>
+																	<label for='inp14'>AED 2,000.000 - 5,000.000</label>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<input id='inp15' type='radio' value="More than AED 10,000.000" name='budget'>
+																</td>
+																<td>
+																	<label for='inp15'>More than AED 10,000.000</label>
+																</td>
+															</tr>
+														</table>
+													</div>
+													<div class="col-md-6 col-12">
+														<table class="text-left">
 
-                    <input type="button" name="next" class="next action-button" value="Next" /> <input type="button"
-                      name="previous" class="previous action-button-previous" value="Previous" />
-                  </fieldset>
-                  <fieldset data-step="Purpose of purchasing Real Estate">
-                    <div class="form-card">
-                      <div class="row">
-                        <div class="col-md-6 col-6">
-                          <table class="text-left">
+															<tr>
+																<td>
+																	<input id='inp16' type='radio' value="AED 1,000.000 - 2,000.000" name='budget'>
 
-                            <tr>
-                              <td>
+																</td>
+																<td>
+																	<label for='inp16'>AED 1,000.000 - 2,000.000</label>
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<input id='inp17' type='radio' value="AED 5,000.000 - 10,000.000" name='budget'>
+
+																</td>
+																<td>
+																	<label for='inp17'>AED 5,000.000 -
+																		10,000.000</label>
+																</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+
+											<input type="button" name="next" class="next action-button" value="Next" />
+											<input type="button" name="previous" class="previous action-button-previous"
+												value="Previous" />
+										</fieldset>
+										<fieldset data-step="Purpose of purchasing Real Estate">
+											<div class="form-card">
+												<div class="row">
+													<div class="col-md-6 col-12">
+														<table class="text-left">
+
+															<tr>
+																<td>
                                 <input id='inp18' name="purchasepurpose" value="Personal Use" type='radio'>
-                              </td>
-                              <td>
-                                <label for='inp18'> Personal Use</label>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
+																</td>
+																<td>
+																	<label for='inp18'> Personal Use</label>
+																</td>
+															</tr>
+															<tr>
+																<td>
                                 <input id='inp20' name="purchasepurpose" type='radio'
-                                  value="investment and income generation">
+                                value="investment and income generation">
 
-                              </td>
-                              <td>
-                                <label for='inp20'>investment and income generation</label>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                        <div class="col-md-6 col-6">
-                          <table class="text-left">
+																</td>
+																<td>
+																	<label for='inp20'>investment and income
+																		generation</label>
+																</td>
+															</tr>
+														</table>
+													</div>
+													<div class="col-md-6 col-12">
+														<table class="text-left">
 
-                            <tr>
-                              <td>
+															<tr>
+																<td>
                                 <input id='inp19' name="purchasepurpose" type='radio' value="Secondary Income">
 
-                              </td>
-                              <td>
-                                <label for='inp19'>Secondary Income
-                                </label>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                    <input type="button" name="next" class="next action-button" value="Next" /> <input type="button"
-                      name="previous" class="previous action-button-previous" value="Previous" />
-                  </fieldset>
-                  <fieldset
-                    data-step="Submit your contact details and one of our real estate specialist will contact you soon!!">
-                    <div class="form-card0">
-                      <div class="mb-3">
-                        <input class="form-control form-control-lg cst_input" type="text" placeholder="First Name"
-                          aria-label="Full Name" name="first_name" value="">
-                      </div>
-                      <div class="mb-3">
-                        <input class="form-control form-control-lg cst_input" type="text" placeholder="Last Name"
-                          aria-label="Full Name" name="last_name">
-                      </div>
-                      <div class="mb-3">
-                        <input class="form-control form-control-lg cst_input" type="email" name="email"
-                          placeholder="Email" aria-label="Email">
-                      </div>
-                      <div class="mb-3">
+																</td>
+																<td>
+																	<label for='inp19'>Secondary Income
+																	</label>
+																</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+											<input type="button" name="next" class="next action-button" value="Next" />
+											<input type="button" name="previous" class="previous action-button-previous"
+												value="Previous" />
+										</fieldset>
+										<fieldset
+											data-step="Submit your contact details and one of our real estate specialist will contact you soon!!">
+											<div class="form-card0">
+												<div class="mb-2">
+													<input class="form-control form-control-lg cst_input" type="text"
+														placeholder="First Name" aria-label="Full Name" name="first_name" value="">
+												</div>
+												<div class="mb-2">
+													<input class="form-control form-control-lg cst_input" type="text"
+														placeholder="Last Name" aria-label="Full Name" name="last_name">
+												</div>
+												<div class="mb-2">
+													<input class="form-control form-control-lg cst_input" type="email" name="email"
+														placeholder="Email" aria-label="Email">
+												</div>
+												<div class="mb-2">
                         <div class="change-country"></div>
                         <input placeholder="Phone No" name="phone"
                           class="phonecode form-control form-control-lg cst_input" data-parsley-required="true"
                           data-parsley-required-message="Please Enter Valid Phone Number" data-parsley-group="block-4"
                           data-parsley-type="number" data-parsley-validphone type="tel" required="">
                         <div class="phoneerror"></div>
-                      </div>
-                      <!--			    <div class="d-grid gap-2">  <button class="btn cstbtn" type="submit">SUBMIT</button>
+												</div>
+												<!--			    <div class="d-grid gap-2">  <button class="btn cstbtn" type="button">SUBMIT</button>
 </div> -->
 
-                    </div>
-                    <input type="submit" onclick="gtag_report_conversion()" name="Submit" class="next action-button" value="Submit" />
-                    <!--<input type="button" name="previous" class="previous action-button-previous" value="Previous" />-->
-                  </fieldset>
+											</div>
+											<input type="submit" name="Submit" onclick="gtag_report_conversion()" class="next action-button"
+												value="Submit" />
+											<!--<input type="button" name="previous" class="previous action-button-previous" value="Previous" />-->
+										</fieldset>
 
-                  <fieldset data-step="Finish">
-                    <div class="form-card">
-                      <h2 class="purple-text text-center"><strong>Thank You</strong></h2> <br>
-                    </div>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+										<fieldset data-step="Finish">
+											<div class="form-card">
+												<h2 class="purple-text text-center"><strong>Thank You</strong></h2> <br>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 
-      </div>
-    </div>
-  </div>
+				</div>
+			</div>
+		</div>
 
-</div>
+	</div>
 
-<div class="container">
-  <div class="clearfix"></div>
-
-  <div class="d-flex justify-content-center">
-    <div class="col-md-12">
-      <div class="scrollbox scrollbox--secondary scrollbox--reverse mt-3">
-        <div class="scrollbox__item">
-          <div class="feature">
-            Highest Rental Income
-          </div>
-        </div>
-        <div class="scrollbox__item">
-          <div class="feature">
-            Tax-Free Investments
-          </div>
-        </div>
-        <div class="scrollbox__item">
-          <div class="feature">
-            Flexible Payment Plans
-          </div>
-        </div>
-        <div class="scrollbox__item">
-          <div class="feature">
-            Highest Rental Income
-          </div>
-        </div>
-        <div class="scrollbox__item">
-          <div class="feature">
-            Tax-Free Investments
-          </div>
-        </div>
-        <div class="scrollbox__item">
-          <div class="feature">
-            Flexible Payment Plans
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
+	<div class="spc extra_space">
+		<div class="container">
+			<div class="d-flex justify-content-center">
+				<div class="col-md-10">
+					<div class="row">
+						<div class="col-md-4 col-12">
+							<div class="feature">
+								Highest Rental Income
+							</div>
+						</div>
+						<div class="col-md-4 col-12">
+							<div class="feature">
+								Tax-Free Investments
+							</div>
+						</div>
+						<div class="col-md-4 col-12">
+							<div class="feature">
+								Flexible Payment Plans
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
-<div class="theme_spacing001 extra_space">
-  <div class="container">
-    <div class="about">
-      <p>
-        Dubai is a cosmopolitan city with over 200 Nationalities. It is one of the fantastic places for real estate
-        investors to purchase and retain both long-term and short-term rental properties. The high yields of up to
-        10%, relatively low property prices and numerous tax and visa benefits make it a great market to invest in
-        property.<br><br>
+	<div class="extra_space">
+		<div class="container">
+			<div class="about">
+				<p>
+					Dubai is a cosmopolitan city with over 200 Nationalities. It is one of the fantastic places for real
+					estate investors to purchase and retain both long-term and short-term rental properties. The high
+					yields of up to 10%, relatively low property prices and numerous tax and visa benefits make it a
+					great market to invest in property.<br><br>
 
-        With the Growth in Demand property prices in Dubai have increased by 14%.This year in the month of July, Dubai
-        residential property index hit a ten year high, with nearly 9000 sales registered.
-      </p>
+					With the Growth in Demand property prices in Dubai have increased by 14%.This year in the month of
+					July, Dubai residential property index hit a ten year high, with nearly 9000 sales registered.
+				</p>
 
 
 
-    </div>
-  </div>
-</div>
+			</div>
+		</div>
+	</div>
 
-<div class="theme_spacing001">
-  <h1 class="text-center mb-5">Trending Real Estate Projects In Dubai</h1>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-12">
-        <div class="card">
-          <a href="/chictower">
-            <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
-            <div class="figure">
+	<div class="theme_spacing001">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-12">
+					<div class="card">
+						<a href="/chictower">
+							<script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+							<div class="figure">
               <%=image_tag "p1.jpg", class: "Sirv image-main", data: { src: asset_path('p1.jpg')} %>
               <%=image_tag "", class: "Sirv image-hover" , data: { src: asset_path('ph1.jpg') } %>
-            </div>
-          </a>
-          <div class="mt-3 mb-3">
-            <a href="#" class="card-title">About CHIC Tower</a>
-            <p class="card-text">Chic Tower in collaboration with the famous Swiss Jewelry House de Grisogono, is one
-              of the latest luxury projects launched in Dubai.</p>
-          </div>
+							</div>
+						</a>
+						<div class="mt-3 mb-3">
+							<a href="#" class="card-title">About CHIC Tower</a>
+							<p class="card-text">Chic Tower in collaboration with the famous Swiss Jewelry House de
+								Grisogono, is one of the latest luxury projects launched in Dubai.</p>
+						</div>
 
-        </div>
-      </div>
-      <div class="col-md-4 col-12">
-        <div class="card">
-          <a href="/peninsula">
-            <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
-            <div class="figure">
+					</div>
+				</div>
+				<div class="col-md-4 col-12">
+					<div class="card">
+						<a href="/peninsula">
+							<script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+							<div class="figure">
               <%=image_tag "p2.jpg", class: "Sirv image-main", data: {src: asset_path('p2.jpg') } %>
               <%=image_tag "", class: "Sirv image-hover" , data: {src: asset_path('p2.jpg') }%>
-            </div>
-          </a>
-          <div class="mt-3 mb-3">
-            <a href="#" class="card-title">Peninsula Four, The Plaza</a>
-            <p class="card-text">Where the ultimate in style meets impeccable design, Peninsula Four, The Plaza
-              provides a combination of sophistication.</p>
-          </div>
+							</div>
+						</a>
+						<div class="mt-3 mb-3">
+							<a href="#" class="card-title">Peninsula Four, The Plaza</a>
+							<p class="card-text">Where the ultimate in style meets impeccable design, Peninsula Four,
+								The Plaza provides a combination of sophistication.</p>
+						</div>
 
-        </div>
-      </div>
-      <div class="col-md-4 col-12">
-        <div class="card">
-          <a href="/jumeriah">
-            <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
-            <div class="figure">
+					</div>
+				</div>
+				<div class="col-md-4 col-12">
+					<div class="card">
+						<a href="/jumeriah">
+							<script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+							<div class="figure">
               <%=image_tag "p3.jpg", class: "Sirv image-main", data: { src: asset_path('p3.jpg') } %>
               <%=image_tag "", class: "Sirv image-hover", data: {src:  asset_path('p3.jpg') }%>
-            </div>
-          </a>
-          <div class="mt-3 mb-3">
-            <a href="#" class="card-title">Jumeirah Living Business Bay</a>
-            <p class="card-text">Luxury Waterfront Homes in Business Bay with stunning views of Dubai Water Canal &
-              Downtown Dubai Skyline.
+							</div>
+						</a>
+						<div class="mt-3 mb-3">
+							<a href="#" class="card-title">Jumeirah Living Business Bay</a>
+							<p class="card-text">Luxury Waterfront Homes in Business Bay with stunning views of Dubai
+								Water Canal & Downtown Dubai Skyline.
 
-            </p>
-          </div>
+							</p>
+						</div>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="theme_spacing">
-  <div class="container">
-    <h4 class="hadd">Why to Invest in Dubai?</h4>
-    <div class="row">
-      <div class="col-md-6 col-12">
-          <div class="property_sec">
-            <%=image_tag "ab6.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-            <h2>Tax-Free Investment</h2>
-            <p>
-              If you buy a property in Dubai, you don't have to worry about tax, as the emirate has no annual property
-              tax, income tax, or capital gains tax, making it the best city to invest in real estate. 
-              </p>
-          </div>
-      </div>
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab7.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>High Returns</h2>
-          <p> Real estate in Dubai offers a high return on investment, significantly higher than those offered in its
-            counterpart cities, like London and New York. Indeed, it's a rewarding experience as Dubai always has
-            attractive properties in popular areas which offer exceptional returns. </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab4.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>High Standard of Living</h2>
-          <p>
-            Dubai is globally recognized as one of the best cities to invest in due to its excellent quality of life
-            and world-class infrastructure. With top-quality dining venues, luxurious lifestyle, beautiful beaches,
-            connectivity, and state-of-the-art entertainment and recreational facilities. </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab1.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>Growing Population</h2>
-          <p>
-            Dubai is a cosmopolitan city with home
-            to over 200 Nationalities residing in hopes to
-            expand their careers and businesses.</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab2.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>Stable Currency</h2>
-          <p> The UAE Dirham has been pegged to the US dollar since 1973 and set at constant rate since 1997 - making
-            it one of the most stable currencies in the world. </p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab3.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>Development and Innovation</h2>
-          <p>
-            Dubai is a major hub for technology and business growth, constantly evolving in order to foster an
-            innovation, ecosystem. Dubai is a recognized world leader for AI, Robotics, and fintech in the region.</p>
-        </div>
-      </div>
-     
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab5.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>Safety and security</h2>
-          <p>
-            The UAE is one of the world's safest countries with a law enforcement system that showcases years of
-            development and foresight.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab8.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>World-Class Healthcare</h2>
-          <p>
-            With heavy investment in the healthcare sector and some of the region's finest hospitals and clinics, the
-            city is a perfect choice for your health and wellbeing. </p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab9.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>Managing COVID-19</h2>
-          <p>
-            With its country-wide vaccination campaign, the UAE is a global model for crisis preparedness, maintaining
-            the highest levels of protection against the pandemic.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-12">
-        <div class="property_sec">
-          <%=image_tag "ab10.png", width: "90" , class: "img-fluid" , height: "90" , alt: "" %>
-          <h2>Easy Connectivity</h2>
-          <p>
-            Dubai is a direct flight away from the 97 countries with the world's leading airlines flying from Dubai's
-            airports, helping you access the rest of the world with ease.</p>
-        </div>
-      </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
+	<div class="theme_spacing">
+		<div class="container">
+			<h4 class="hadd">Why to Invest in Dubai?</h4>
+			<div class="row">
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab1.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>Growing Population</h2>
+						<p>
+							Dubai is a cosmopolitan city with home
+							to over 200 Nationalities residing in hopes to
+							expand their careers and businesses.</p>
+					</div>
+				</div>
 
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab2.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>Stable Currency</h2>
+						<p> The UAE Dirham has been pegged to the US dollar since 1973 and set at constant rate since
+							1997 - making it one of the most stable currencies in the world. </p>
+					</div>
+				</div>
 
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab3.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>Development and Innovation</h2>
+						<p>
+							Dubai is a major hub for technology and business growth, constantly evolving in order to
+							foster an innovation, ecosystem. Dubai is a recognized world leader for AI, Robotics, and
+							fintech in the region.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab4.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>High Standard of Living</h2>
+						<p>
+							Dubai is globally recognized as one of the best cities to invest in due to its excellent
+							quality of life and world-class infrastructure. With top-quality dining venues, luxurious
+							lifestyle, beautiful beaches, connectivity, and state-of-the-art entertainment and
+							recreational facilities. </p>
+					</div>
+				</div>
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab5.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>Safety and security</h2>
+						<p>
+							The UAE is one of the world’s safest countries with a law enforcement system that showcases
+							years of development and foresight.</p>
+					</div>
+				</div>
 
-    </div>
-  </div>
-</div>
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab6.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>Tax-Free Investment</h2>
+						<p>
+							If you buy a property in Dubai, you don’t have to worry about tax, as the emirate has no
+							annual property tax, income tax, or capital gains tax, making it the best city to invest in
+							real estate. </p>
+					</div>
+				</div>
 
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab7.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>High Returns</h2>
+						<p> Real estate in Dubai offers a high return on investment, significantly higher than those
+							offered in its counterpart cities, like London and New York. Indeed, it’s a rewarding
+							experience as Dubai always has attractive properties in popular areas which offer
+							exceptional returns. </p>
+					</div>
+				</div>
 
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab8.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>World-Class Healthcare</h2>
+						<p>
+							With heavy investment in the healthcare sector and some of the region’s finest hospitals and
+							clinics, the city is a perfect choice for your health and wellbeing. </p>
+					</div>
+				</div>
 
-<div class="ftrbg">
-  <div class="container">
-    <%=image_tag "logo-web.png", width: "200" , class: "img-fluid" , alt: "" %>
-    <p>
-      Dubai is a cosmopolitan city with over 200 Nationalities. It is one of the fantastic places for real estate
-      investors to purchase and retain both long-term and short-term rental properties. The high yields of up to 10%,
-      relatively low property prices and numerous tax and visa benefits make it a great market to invest in property.
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab9.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>Managing COVID-19</h2>
+						<p>
+							With its country-wide vaccination campaign, the UAE is a global model for crisis
+							preparedness, maintaining the highest levels of protection against the pandemic.</p>
+					</div>
+				</div>
 
-      With the Growth in Demand property prices in Dubai have increased by 14%.This year in the month of July, Dubai
-      residential property index hit a ten year high, with nearly 9000 sales registered.
-    </p>
-    <p>© 2022 <strong>GCC Realtors</strong></p>
-  </div>
-</div>
+				<div class="col-md-6 col-12">
+					<div class="property_sec">
+						<%=image_tag "ab10.png" , width: "90" , class: "img-fluid" , height: "90" , alt: ""  %>
+						<h2>Easy Connectivity</h2>
+						<p>
+							Dubai is a direct flight away from the 97 countries with the world’s leading airlines flying
+							from Dubai’s airports, helping you access the rest of the world with ease.</p>
+					</div>
+				</div>
 
 
 
 
 
+			</div>
+		</div>
+	</div>
 
 
 
+	<div class="ftrbg">
+		<div class="container">
+			<%=image_tag "logo-web.png" , width: "200" , class: "img-fluid" , alt: ""  %>
+			<p>
+				Dubai is a cosmopolitan city with over 200 Nationalities. It is one of the fantastic places for real
+				estate investors to purchase and retain both long-term and short-term rental properties. The high yields
+				of up to 10%, relatively low property prices and numerous tax and visa benefits make it a great market
+				to invest in property.
 
+				With the Growth in Demand property prices in Dubai have increased by 14%.This year in the month of July,
+				Dubai residential property index hit a ten year high, with nearly 9000 sales registered.
+			</p>
+			<p>© 2022 <strong>DUBAI PROPERTY</strong> Real Estate.</p>
+		</div>
+	</div>
 
-<%=content_for :javascript do%>
+	<!--HTML Content End-->
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<%= javascript_pack_tag 'carousal', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'step', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'jqueryanimatecss', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'form', 'data-turbolinks-track': 'reload' %>
+	<%=content_for :javascript do%>
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <%= javascript_pack_tag 'carousal', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'step', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'jqueryanimatecss', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'form', 'data-turbolinks-track': 'reload' %>
+  <script>
+		/* Demo purposes only */
+		var snippet = [].slice.call(document.querySelectorAll('.hover'));
+		if (snippet.length) {
+			snippet.forEach(function (snippet) {
+				snippet.addEventListener('mouseout', function (event) {
+					if (event.target.parentNode.tagName === 'figure') {
+						event.target.parentNode.classList.remove('hover')
+					} else {
+						event.target.parentNode.classList.remove('hover')
+					}
+				});
+			});
+		}
+	</script>
 
-<script>
-  /* Demo purposes only */
-  var snippet = [].slice.call(document.querySelectorAll('.hover'));
-  if (snippet.length) {
-    snippet.forEach(function (snippet) {
-      snippet.addEventListener('mouseout', function (event) {
-        if (event.target.parentNode.tagName === 'figure') {
-          event.target.parentNode.classList.remove('hover')
-        } else {
-          event.target.parentNode.classList.remove('hover')
-        }
-      });
-    });
-  }
-</script>
+	<script>
+		var changed = function () {
 
-<script>
-  var changed = function () {
+			Array.from(document.querySelectorAll("table")).forEach((element, index) => {
+				Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
 
-    Array.from(document.querySelectorAll("table")).forEach((element, index) => {
-      Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
+					if (myinp.checked == true) {
+						myinp.parentNode.parentNode.classList.add("active");
+					} else {
+						myinp.parentNode.parentNode.classList.remove("active");
+					}
 
-        if (myinp.checked == true) {
-          myinp.parentNode.parentNode.classList.add("active");
-        } else {
-          myinp.parentNode.parentNode.classList.remove("active");
-        }
+				});
+			});
+		} //changed function ends
 
-      });
-    });
-  } //changed function ends
-
-  Array.from(document.querySelectorAll("table")).forEach((element, index) => {
-    Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
-      var checkmark = document.createElement("span");
-      checkmark.classList.add("checkmark");
-      myinp.parentNode.appendChild(checkmark);
-      myinp.addEventListener("change", changed);
-    });
-  });
-</script>
+		Array.from(document.querySelectorAll("table")).forEach((element, index) => {
+			Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
+				var checkmark = document.createElement("span");
+				checkmark.classList.add("checkmark");
+				myinp.parentNode.appendChild(checkmark);
+				myinp.addEventListener("change", changed);
+			});
+		});
+	</script>
 
 <%end%>

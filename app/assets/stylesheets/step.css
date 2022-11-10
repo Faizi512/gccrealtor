@@ -18,8 +18,10 @@
 
 .form-card {
     text-align: center;
-    margin: 0 0 30px 0;
+    margin: 0 0 0px 0;
 }
+
+.checkbox{text-align:left!important;margin:5px 0px;border: solid #b9b4d1 1px;padding: 5px;border-radius: 8px;}
 
 .fieldsetForm fieldset:not(:first-of-type) {
     display: none
@@ -32,7 +34,7 @@
     border-radius: 0px;
     margin-bottom: 25px;
     margin-top: 2px;
-    width: 100%;
+    /*width: 100%;*/
     box-sizing: border-box;
     font-family: montserrat;
     color: #2C3E50;
@@ -52,7 +54,7 @@
 
 .fieldsetForm .action-button {
     width: 100px;
-    background: #1e4a81;
+    background: #f56b3b;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -65,7 +67,7 @@
 
 .fieldsetForm .action-button:hover,
 .fieldsetForm .action-button:focus {
-    background-color: #1e4a81;
+    background-color: #f56b3b;
 }
 
 .fieldsetForm .action-button-previous {
@@ -78,7 +80,7 @@
     cursor: pointer;
     padding: 10px 5px;
     margin: 10px 5px 10px 0px;
-    float: right
+    float: left;
 }
 
 .fieldsetForm .action-button-previous:hover,
@@ -128,13 +130,3 @@
     border-radius: 20px;
 }
 
-.fieldsetStep {
-    min-height: 2.0em;
-    line-height: 1.4em;
-    color: #343434;
-    font-weight: 700;
-    margin: 0 0px;
-    margin: 0 0 5px 0;
-    font-size: 22px;
-    padding: 30px 0 5px 0;
-}
