@@ -47,7 +47,9 @@
       let url = window.location.href
       var callback = function () {
         if (typeof(url) != 'undefined') {
-          document.getElementById("submit_form").submit();
+          if($('.parsley-errors-list').length === 0)
+            document.getElementById("submit_form").submit();
+          return false
         }
       };
       gtag('event', 'conversion', {
@@ -57,6 +59,15 @@
       return false;
     }
 </script>
+
+<style>
+.hidden {
+  display: none
+}
+.parsley-errors-list {
+  color: red
+}
+</style>
 <%=yield :css%>
 
 </head>
