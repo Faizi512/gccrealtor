@@ -30,18 +30,18 @@
                 <div class="col-md-4 col-12">
                     <div class="search_form">
                         <h6>Download Brochure</h6>
-                        <form action="/submit_lead" id="submit_form"  method="POST">
+                        <form action="/submit_lead" id="submit_form" data-parsley-validate="" method="POST">
                             <div class="mb-3">
                                 <input class="form-control form-control-lg cst_input" type="text"
-                                    placeholder="First Name" aria-label="Full Name" name="first_name">
+                                    placeholder="First Name" aria-label="Full Name" name="first_name" required>
                             </div>
                             <div class="mb-3">
                                 <input class="form-control form-control-lg cst_input" type="text"
-                                    placeholder="Last Name" aria-label="Full Name" name="last_name">
+                                    placeholder="Last Name" aria-label="Full Name" name="last_name" required>
                             </div>
                             <div class="mb-3">
                                 <input class="form-control form-control-lg cst_input" type="text" placeholder="Email"
-                                    aria-label="Email" name="email">
+                                    aria-label="Email" name="email" required>
                             </div>
                             <div class="mb-3">
                                 <div class="change-country"></div>
@@ -49,7 +49,7 @@
                                     class="phonecode form-control form-control-lg cst_input"
                                     data-parsley-required="true"
                                     data-parsley-required-message="Please Enter Valid Phone Number"
-                                    data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                    data-parsley-group="block-4" data-parsley-type="number" 
                                     type="tel" required="">
                                 <div class="phoneerror"></div>
                             </div>
@@ -62,7 +62,8 @@
                             <input type="hidden" id="phonecode" name="phonecode" value="+44">
                             <input type="hidden" name="phonelocal" value="12345678">
                             <input type="hidden" name="project1" value="peninsula">
-                            <div class="d-grid gap-2"> <button class="btn cstbtn" onclick="gtag_report_conversion()" type="submit">Download Now</button>
+                            <div class="d-grid gap-2"> <button class="btn cstbtn" onclick="gtag_report_conversion()"
+                                    type="submit">Download Now</button>
                             </div>
                     </div>
                     </form>
@@ -195,98 +196,98 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body pb-5">
-                        <form action="/submit_lead" id="submit_form" method="POST">
+                            <form action="/submit_lead" id="submit_form" method="POST">
 
-                            <div class="row">
-                                <div class="col-md-6 col-12">
-                                    <div class="mb-3">
-                                        <span for="exampleFormControlInput1" class="form-label">First Name</span>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="First Name" name="first_name">
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <span for="exampleFormControlInput1" class="form-label">First Name</span>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="First Name" name="first_name">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-6 col-12">
-                                    <div class="mb-3">
-                                        <span for="exampleFormControlInput1" class="form-label">Last Name</span>
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="Last Name" name="last_name">
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <span for="exampleFormControlInput1" class="form-label">Last Name</span>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Last Name" name="last_name">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-6 col-12">
-                                    <div class="mb-3">
-                                        <span for="exampleFormControlInput1" class="form-label">Email</span>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="Email" name="email">
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <span for="exampleFormControlInput1" class="form-label">Email</span>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Email" name="email">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-6 col-12">
-                                    <div class="mb-3">
-                                        <span for="exampleFormControlInput1" class="form-label">Phone Number</span>
-                                        <div class="change-country"></div>
-                                        <input placeholder="Phone No" name="phone"
-                                            class="phonecode form-control"
-                                            data-parsley-required="true"
-                                            data-parsley-required-message="Please Enter Valid Phone Number"
-                                            data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
-                                            type="tel" required="">
-                                        <div class="phoneerror"></div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="mb-3">
+                                            <span for="exampleFormControlInput1" class="form-label">Phone Number</span>
+                                            <div class="change-country"></div>
+                                            <input placeholder="Phone No" name="phone" class="phonecode form-control"
+                                                data-parsley-required="true"
+                                                data-parsley-required-message="Please Enter Valid Phone Number"
+                                                data-parsley-group="block-4" data-parsley-type="number"
+                                                data-parsley-validphone type="tel" required="">
+                                            <div class="phoneerror"></div>
+                                        </div>
+                                        <input type="hidden" value="apartments" name="propertytype">
+                                        <input id='inp1' value="studio" type='hidden' name='bedrooms[]'>
+                                        <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>
+                                        <input id='inp18' name="purchasepurpose" value="Personal Use" type='hidden'>
+                                        <input type="hidden" name="sid" value="1">
+                                        <input type="hidden" name="project" value="PENINSULA TOWER FOUR">
+                                        <input type="hidden" id="phonecode" name="phonecode" value="+44">
+                                        <input type="hidden" name="phonelocal" value="12345678">
+                                        <input type="hidden" name="project1" value="peninsula">
                                     </div>
-                                    <input type="hidden" value="apartments" name="propertytype">
-                                    <input id='inp1' value="studio" type='hidden' name='bedrooms[]'>
-                                    <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>
-                                    <input id='inp18' name="purchasepurpose" value="Personal Use" type='hidden'>
-                                    <input type="hidden" name="sid" value="1">
-                                    <input type="hidden" name="project" value="PENINSULA TOWER FOUR">
-                                    <input type="hidden" id="phonecode" name="phonecode" value="+44">
-                                    <input type="hidden" name="phonelocal" value="12345678">
-                                    <input type="hidden" name="project1" value="peninsula">
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-dark" onclick="gtag_report_conversion()" type="submit">Register Now</button>
-                                </div>
-                                </form>
-                            </div>
+                                    <div class="clearfix"></div>
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                        <button class="btn btn-dark" onclick="gtag_report_conversion()"
+                                            type="submit">Register Now</button>
+                                    </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-12">
-                <figure class='preview'>
-                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"> <%=image_tag "peninsula/dn1.jpg" %> </a>
-                    <!--    <div class='img-overlay'>
+        </div>
+        <div class="col-md-4 col-12">
+            <figure class='preview'>
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal"> <%=image_tag "peninsula/dn1.jpg" %> </a>
+                <!--    <div class='img-overlay'>
     <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
     </div>-->
 
-                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Brochure</a>
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Brochure</a>
 
-                </figure>
-            </div>
-            <div class="col-md-4 col-12">
-                <figure class='preview'>
-                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"> <%=image_tag "peninsula/dn2.jpg" %> </a>
-                    <!--    <div class='img-overlay'>
+            </figure>
+        </div>
+        <div class="col-md-4 col-12">
+            <figure class='preview'>
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal"> <%=image_tag "peninsula/dn2.jpg" %> </a>
+                <!--    <div class='img-overlay'>
     <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
     </div>-->
-                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Floor Plan</a>
-                </figure>
-            </div>
-            <div class="col-md-4 col-12">
-                <figure class='preview'>
-                    <a data-bs-toggle="modal" data-bs-target="#exampleModal"><%=image_tag "peninsula/dn3.jpg" %></a>
-                    <!--    <div class='img-overlay'>
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Floor Plan</a>
+            </figure>
+        </div>
+        <div class="col-md-4 col-12">
+            <figure class='preview'>
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal"><%=image_tag "peninsula/dn3.jpg" %></a>
+                <!--    <div class='img-overlay'>
     <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
     </div>-->
-                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Payment
-                        Plan</a>
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class='overlay-txt'>Download Payment
+                    Plan</a>
 
-                </figure>
-            </div>
+            </figure>
         </div>
     </div>
+</div>
 </div>
 
 
@@ -659,7 +660,7 @@
 
 
 <%=content_for :javascript do %>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
@@ -685,5 +686,17 @@
         });
     }
 </script>
+
+
+$(function () {
+    document.getElementById("submit_form").window.Parsley.on('field:validated', function () {
+            var ok = $('.parsley-error').length === 0;
+            $('.bs-callout-info').toggleClass('hidden', !ok);
+            $('.bs-callout-warning').toggleClass('hidden', ok);
+        })
+        .on('form:submit', function () {
+            return false; // Don't submit form for this demo
+        });
+});
 
 <%end%>
