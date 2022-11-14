@@ -175,7 +175,7 @@
 
 														<tr>
 															<td>
-																<input id='inp13' type='radio' checked
+																<input id='inp13' type='radio'
 																	value="Below AED 1,000.000" name='budget'
 																	 
 																	data-parsley-required-message="Please Select atleast one option"
@@ -235,9 +235,11 @@
 											</div>
 										</div>
 
-										<input type="button" name="next" class="next action-button" value="Next" />
+										<input id="btn3" type="button" name="next" class="next action-button" value="Next" />
 										<input type="button" name="previous" class="previous action-button-previous"
 											value="Previous" />
+										<br><br>
+										<p id='red-2' style="color: red;">Please select one option.</p>
 									</fieldset>
 									<fieldset data-step="Purpose of purchasing Real Estate">
 										<div class="form-card">
@@ -248,7 +250,7 @@
 														<tr>
 															<td>
 																<input id='inp18' name="purchasepurpose"
-																	value="Personal Use" type='radio' checked
+																	value="Personal Use" type='radio'
 																	 
 																	data-parsley-required-message="Please Select atleast one option"
 																	data-parsley-group="block-3" >
@@ -288,9 +290,11 @@
 												</div>
 											</div>
 										</div>
-										<input type="button" name="next" class="next action-button" value="Next" />
+										<input id="btn4"  type="button" name="next" class="next action-button" value="Next" />
 										<input type="button" name="previous" class="previous action-button-previous"
 											value="Previous" />
+										<br><br>
+										<p id='red-3' style="color: red;">Please select one option.</p>
 									</fieldset>
 									<fieldset
 										data-step="Submit your contact details and one of our real estate specialist will contact you soon!!">
@@ -645,6 +649,75 @@
 			buttonSub.disabled = true;
 			buttonSub.style.background = "gray";
 			text.style.display = "block";
+		}
+	});
+
+	let buttonSub3 = document.getElementById("btn3");
+	let text2 = document.getElementById("red-2");
+
+	let inp13 = document.getElementById("inp13");
+	let inp14 = document.getElementById("inp14");
+	let inp15 = document.getElementById("inp15");
+	let inp16 = document.getElementById("inp16");
+	let inp17 = document.getElementById("inp17");
+	buttonSub3.disabled = true;
+	buttonSub3.style.background = "gray";
+
+	$("div").click(function(){
+		if (inp13.checked) {
+			buttonSub3.disabled = false;
+			buttonSub3.style.background = "#f56b3b";
+			text2.style.display = "none";
+		} else if (inp14.checked) {
+			buttonSub3.disabled = false;
+			buttonSub3.style.background = "#f56b3b";
+			text2.style.display = "none";
+		} else if (inp15.checked) {
+			buttonSub3.disabled = false;
+			buttonSub3.style.background = "#f56b3b";
+			text2.style.display = "none";
+		} else if (inp16.checked) {
+			buttonSub3.disabled = false;
+			buttonSub3.style.background = "#f56b3b";
+			text2.style.display = "none";
+		} else if (inp17.checked) {
+			buttonSub3.disabled = false;
+			buttonSub3.style.background = "#f56b3b";
+			text2.style.display = "none";
+	} else {
+			buttonSub3.disabled = true;
+			buttonSub3.style.background = "gray";
+			text2.style.display = "block";
+		}
+	});
+
+	let buttonSub4 = document.getElementById("btn4");
+	let text3 = document.getElementById("red-3");
+
+	let inp19 = document.getElementById("inp19");
+	let inp20 = document.getElementById("inp20");
+	let inp18 = document.getElementById("inp18");
+
+	buttonSub4.disabled = true;
+	buttonSub4.style.background = "gray";
+
+	$("div").click(function(){
+		if (inp19.checked) {
+			buttonSub4.disabled = false;
+			buttonSub4.style.background = "#f56b3b";
+			text3.style.display = "none";
+		} else if (inp18.checked) {
+			buttonSub4.disabled = false;
+			buttonSub4.style.background = "#f56b3b";
+			text3.style.display = "none";
+		} else if (inp20.checked) {
+			buttonSub4.disabled = false;
+			buttonSub4.style.background = "#f56b3b";
+			text3.style.display = "none";
+		} else {
+			buttonSub4.disabled = true;
+			buttonSub4.style.background = "gray";
+			text3.style.display = "block";
 		}
 	});
 
