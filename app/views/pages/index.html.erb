@@ -161,9 +161,11 @@
 												</div>
 											</div>
 										</div>
-										<input type="button" name="next" class="next action-button" value="Next" />
+										<input id="btn2" type="button" name="next" class="next action-button" value="Next" />
 										<input type="button" name="previous" class="previous action-button-previous"
 											value="Previous" />
+										<br><br>
+											<p id='red-1' style="color: red;">Please select one option.</p>
 									</fieldset>
 									<fieldset data-step="What is your budget approx">
 										<div class="form-card">
@@ -173,7 +175,7 @@
 
 														<tr>
 															<td>
-																<input id='inp13' type='radio'
+																<input id='inp13' type='radio' checked
 																	value="Below AED 1,000.000" name='budget'
 																	 
 																	data-parsley-required-message="Please Select atleast one option"
@@ -246,7 +248,7 @@
 														<tr>
 															<td>
 																<input id='inp18' name="purchasepurpose"
-																	value="Personal Use" type='radio'
+																	value="Personal Use" type='radio' checked
 																	 
 																	data-parsley-required-message="Please Select atleast one option"
 																	data-parsley-group="block-3" >
@@ -611,6 +613,41 @@
 </script>
 
 <script>
+	let buttonSub = document.getElementById("btn2");
+	let text = document.getElementById("red-1");
+
+	let checkbox1 = document.getElementById("checkbox1");
+	let checkbox2 = document.getElementById("checkbox2");
+	let checkbox7 = document.getElementById("checkbox7");
+	let checkbox8 = document.getElementById("checkbox8");
+
+	buttonSub.disabled = true;
+	buttonSub.style.background = "gray";
+
+	$("div").click(function(){
+		if (checkbox1.checked) {
+			buttonSub.disabled = false;
+			buttonSub.style.background = "#f56b3b";
+			text.style.display = "none";
+		} else if (checkbox2.checked) {
+			buttonSub.disabled = false;
+			buttonSub.style.background = "#f56b3b";
+			text.style.display = "none";
+		} else if (checkbox7.checked) {
+			buttonSub.disabled = false;
+			buttonSub.style.background = "#f56b3b";
+			text.style.display = "none";
+		} else if (checkbox8.checked) {
+			buttonSub.disabled = false;
+			buttonSub.style.background = "#f56b3b";
+			text.style.display = "none";
+		} else {
+			buttonSub.disabled = true;
+			buttonSub.style.background = "gray";
+			text.style.display = "block";
+		}
+	});
+
 	var changed = function () {
 
 		Array.from(document.querySelectorAll("table")).forEach((element, index) => {
