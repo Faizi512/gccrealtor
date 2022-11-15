@@ -91,7 +91,7 @@
 							<div class="">
 								<div class="fieldsetStep d-flex justify-content-center align-items-end">
 									<span></span></div>
-								<form id="submit_form" class="fieldsetForm" action="/submit_lead" data-parsley-validate="" method="POST">
+								<form id="submit_form" class="fieldsetForm" action="/submit_lead" method="POST">
 									<fieldset data-step="Type of property you are looking to buy/invest">
 										<div class="form-card">
 											<label class="img-btn">
@@ -310,24 +310,28 @@
 													required data-parsley-group="block-4" required>
 											</div>
 											<div class="mb-2">
-												<input class="form-control form-control-lg cst_input" type="email"
-													name="email" placeholder="Email" aria-label="Email"  data-parsley-group="block-4" required>
+												<input class="form-control email form-control-lg cst_input" type="text" placeholder="Email"
+													aria-label="Email" name="email" data-parsley-required="true"
+													data-parsley-required-message="Please Enter Valid Email Address"
+													data-parsley-group="block-4" data-parsley-type="email" data-parsley-validemail
+													type="email" required="">
 											</div>
 											<div class="mb-2">
+											
 												<div class="change-country"></div>
 												<input placeholder="Phone No" name="phone"
 													class="phonecode form-control form-control-lg cst_input"
-													 
+													data-parsley-required="true"
 													data-parsley-required-message="Please Enter Valid Phone Number"
-													data-parsley-group="block-4" data-parsley-type="number" type="tel"
-													required>
+													data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+													type="tel" required="">
 												<div class="phoneerror"></div>
 											</div>
 											<!--			    <div class="d-grid gap-2">  <button class="btn cstbtn" type="button">SUBMIT</button>
 </div> -->
 
 										</div>
-										<input type="submit" name="Submit" onclick="gtag_report_conversion()"
+										<input type="submit" name="Submit" id="btn-submit"
 											class="action-button" value="Submit" />
 										<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
 									</fieldset>
@@ -744,18 +748,6 @@
 			myinp.addEventListener("change", changed);
 		});
 	});
-
-
-	$(function () {
-		document.getElementById("submit_form").window.Parsley.on('field:validated', function () {
-				 var ok = $('.parsley-error').length === 0;
-				 $('.bs-callout-info').toggleClass('hidden', !ok);
-				 $('.bs-callout-warning').toggleClass('hidden', ok);
-			 })
-			 .on('form:submit', function () {
-				 return false; // Don't submit form for this demo
-			 });
-	 });
 </script>
 
 <%end%>

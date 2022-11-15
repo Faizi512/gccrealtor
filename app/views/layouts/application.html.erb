@@ -47,7 +47,7 @@
       let url = window.location.href
       var callback = function () {
         if (typeof(url) != 'undefined') {
-          if($('.parsley-errors-list').length === 0)
+          if($('.error').length === 0)
             document.getElementById("submit_form").submit();
           return false
         }

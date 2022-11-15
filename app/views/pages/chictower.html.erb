@@ -36,17 +36,20 @@
                                     placeholder="Last Name" aria-label="Full Name" name="last_name" required>
                             </div>
                             <div class="mb-3">
-                                <input class="form-control form-control-lg cst_input" type="text" placeholder="Email"
-                                    name="email" aria-label="Email" required>
+                                <input class="form-control email form-control-lg cst_input" type="text" placeholder="Email"
+                                    aria-label="Email" name="email" data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter Valid Email Address"
+                                    data-parsley-group="block-4" data-parsley-type="email" data-parsley-validemail
+                                    type="email" required="">
                             </div>
                             <div class="mb-3">
                                 <div class="change-country"></div>
                                 <input placeholder="Phone No" name="phone"
-                                    class="phonecode form-control form-control-lg cst_input"
-                                    data-parsley-required="true"
-                                    data-parsley-required-message="Please Enter Valid Phone Number"
-                                    data-parsley-group="block-4" data-parsley-type="number"
-                                    type="tel" required>
+                                class="phonecode form-control form-control-lg cst_input"
+                                data-parsley-required="true"
+                                data-parsley-required-message="Please Enter Valid Phone Number"
+                                data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                type="tel" required="">
                                 <div class="phoneerror"></div>
                                 <input type="hidden" value="apartments" name="propertytype">
                                 <input id='inp1' value="studio" type='hidden' name='bedrooms[]'>
@@ -58,7 +61,7 @@
                                 <input type="hidden" name="phonelocal" value="12345678">
                                 <input type="hidden" name="project1" value="chictower">
                             </div>
-                            <div class="d-grid gap-2"> <button class="btn cstbtn" onclick="gtag_report_conversion()"
+                            <div class="d-grid gap-2"> <button class="btn cstbtn" id="btn-submit"
                                     type="submit">Download Now</button>
                             </div>
                         </form>
@@ -195,7 +198,7 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body pb-5">
-                                <form action="/submit_lead" id="submit_form" data-parsley-validate="" method="POST">
+                                <form action="/submit_lead" id="submit_form" method="POST">
                                     <div class="row">
                                         <div class="col-md-6 col-12">
                                             <div class="mb-3">
@@ -226,13 +229,15 @@
                                             <div class="mb-3">
                                                 <span for="exampleFormControlInput1" class="form-label">Phone
                                                     Number</span>
-                                                <div class="change-country"></div>
-                                                <input placeholder="Phone No" name="phone" class="phonecode form-control
-                                                data-parsley-required=" true"
-                                                    data-parsley-required-message="Please Enter Valid Phone Number"
-                                                    data-parsley-group="block-4" data-parsley-type="number"
-                                                    data-parsley-validphone type="tel" required>
-                                                <div class="phoneerror"></div>
+                                                    <div class="change-country"></div>
+                                                    <input placeholder="Phone No" name="phone"
+                                                        class="phonecode form-control"
+                                                        data-parsley-required="true"
+                                                        data-parsley-required-message="Please Enter Valid Phone Number"
+                                                        data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                                        type="tel" required="">
+                                                    <div class="phoneerror"></div>
+                                               
                                                 <input type="hidden" value="apartments" name="propertytype">
                                                 <input id='inp1' value="studio" type='hidden' name='bedrooms[]'>
                                                 <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>
@@ -248,7 +253,7 @@
                                         </div>
                                         <div class="clearfix"></div>
                                         <div class="d-grid gap-2 col-6 mx-auto">
-                                            <button onclick="gtag_report_conversion()" class="btn btn-dark"
+                                            <button id="btn-submit" class="btn btn-dark"
                                                 type="submit">Register Now</button>
                                         </div>
                                 </form>
@@ -932,15 +937,5 @@
 
     }());
 
-    $(function () {
-       document.getElementById("submit_form").window.Parsley.on('field:validated', function () {
-                var ok = $('.parsley-error').length === 0;
-                $('.bs-callout-info').toggleClass('hidden', !ok);
-                $('.bs-callout-warning').toggleClass('hidden', ok);
-            })
-            .on('form:submit', function () {
-                return false; // Don't submit form for this demo
-            });
-    });
 </script>
 <%end%>
