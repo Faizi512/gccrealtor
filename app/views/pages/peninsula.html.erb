@@ -40,17 +40,27 @@
                                     placeholder="Last Name" aria-label="Full Name" name="last_name" required>
                             </div>
                             <div class="mb-3">
-                                <input class="form-control form-control-lg cst_input" type="text" placeholder="Email"
-                                    aria-label="Email" name="email" required>
+<!--                                <input class="form-control form-control-lg cst_input" type="text" placeholder="Email"-->
+<!--                                    aria-label="Email" name="email" required>-->
+                              <input placeholder="Email" id="email" name="email" class="form-control form-control-lg cst_input"
+                                     data-parsley-required="true"
+                                     data-parsley-required-message="Please Enter Valid Email Address" data-parsley-group="block-4"
+                                     data-parsley-type="email" data-parsley-validemail="" type="email" required="">
                             </div>
                             <div class="mb-3">
                                 <div class="change-country"></div>
-                                <input placeholder="Phone No" name="phone"
-                                    class="phonecode form-control form-control-lg cst_input"
-                                    data-parsley-required="true"
-                                    data-parsley-required-message="Please Enter Valid Phone Number"
-                                    data-parsley-group="block-4" data-parsley-type="number" 
-                                    type="tel" required="">
+                              <input id="phone" name="phone" placeholder="Phone No"
+                                     class="phonecode form-control form-control-lg cst_input"
+                                     data-parsley-required="true"
+                                     data-parsley-required-message="Please Enter Valid Phone Number"
+                                     data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                     type="tel" required="">
+<!--                                <input placeholder="Phone No" name="phone"-->
+<!--                                    class="phonecode form-control form-control-lg cst_input"-->
+<!--                                    data-parsley-required="true"-->
+<!--                                    data-parsley-required-message="Please Enter Valid Phone Number"-->
+<!--                                    data-parsley-group="block-4" data-parsley-type="number" -->
+<!--                                    type="tel" required="">-->
                                 <div class="phoneerror"></div>
                             </div>
                             <input type="hidden" value="apartments" name="propertytype">
