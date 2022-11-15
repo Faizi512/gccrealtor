@@ -4,12 +4,11 @@ import "./parsley"
 $(document).ready(function() {
 
 
-  var formValidation = {};
+  const formValidation = {};
   var areaCode;
   var countryCode1;
   var isPhone = false;
   var isEmail = false;
-  validate();
 
   function validatePhone(countryCode = "GB", callingCode = "44"){
     if (document.querySelector("#phone_code")){
@@ -20,18 +19,17 @@ $(document).ready(function() {
       validateString: function(value){
         var xhr = $.ajax(`https://go.webformsubmit.com/dukeleads/restapi/v1.2/validate/mobile?value=${areaCode}${value}&key=7b32461b4afd7912a0669d5cf2369d50&countryCode=${countryCode1}`)
         return xhr.then(function(json) {
+          debugger
           var skipresponse = ["EC_ABSENT_SUBSCRIBER", "EC_ABSENT_SUBSCRIBER_SM", "EC_CALL_BARRED", "EC_SYSTEM_FAILURE","EC_SM_DF_memoryCapacityExceeded", "EC_NO_RESPONSE", "EC_NNR_noTranslationForThisSpecificAddress", "EC_NNR_MTPfailure", "EC_NNR_networkCongestion"]
           if (skipresponse.includes(json.response) && json.status == "Valid" ) {
             isPhone = true
-            document.querySelector("#phone").innerHTML = document.querySelector("#phone").innerHTML + `<i class="validate success fa fa-check-circle"></i>`
             return true
           }
           else if (json.status == "Valid") {
             isPhone = true
             return true
           }else if(json.status == "Invalid"){
-            $(".global-phone-success").removeClass("d-inline-block")
-            return $.Deferred().reject(`Please Enter Valid Phone Number`);
+            return $.Deferred().reject(`Please Enter Valid ${countryCode} Phone Number`);
           }else if(json.status == "Error"){
             isPhone = true
             return true
@@ -141,9 +139,7 @@ $(document).ready(function() {
   // });
   geoDetection();
 
-  function submit_lead(){
-    
-  }
+  validate();
 
   
 
