@@ -25,7 +25,7 @@
                     <div class="search_form">
                         <div class="search_form01">
                             <h6>Download Brochure</h6>
-                            <form action="/submit_lead"id="submit_form" data-parsley-validate="" method="POST" >
+                            <form action="/submit_lead" id="submit_form" method="POST" >
                             <div class="row">
                                 <div class="mb-3">
                                     <input class="form-control form-control-lg cst_input" type="text" name="first_name"
@@ -36,17 +36,20 @@
                                         placeholder="Last Name" aria-label="Full Name" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input class="form-control form-control-lg cst_input" type="text" name="email"
-                                        placeholder="Email" aria-label="Email" required>
+                                <input class="form-control email form-control-lg cst_input" type="text" placeholder="Email"
+                                    aria-label="Email" name="email" data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter Valid Email Address"
+                                    data-parsley-group="block-4" data-parsley-type="email" data-parsley-validemail
+                                    type="email" required="">
                                 </div>
                                 <div class="mb-3">
                                     <div class="change-country"></div>
-                                    <input placeholder="Phone No"  name="phone"
-                                        class="phonecode form-control form-control-lg cst_input"
-                                        data-parsley-required="true"
-                                        data-parsley-required-message="Please Enter Valid Phone Number"
-                                        data-parsley-group="block-4" data-parsley-type="number" 
-                                        type="tel" required="">
+                                    <input placeholder="Phone No" name="phone"
+                                    class="phonecode form-control form-control-lg cst_input"
+                                    data-parsley-required="true"
+                                    data-parsley-required-message="Please Enter Valid Phone Number"
+                                    data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                    type="tel" required="">
                                     <div class="phoneerror"></div>
                                 </div>
                                 <input type="hidden" value="apartments" name="propertytype">
@@ -58,7 +61,7 @@
                                 <input type="hidden" id="phonecode" name="phonecode" value="+44">
                                 <input type="hidden" name="phonelocal" value="12345678">
                                 <input type="hidden" name="project1" value="jumeriah">
-                                <div class="d-grid gap-2"> <button onclick="gtag_report_conversion()" class="btn cstbtn" type="submit">Download Now</button>
+                                <div class="d-grid gap-2"> <button id="btn-submit" class="btn cstbtn" type="submit">Download Now</button>
                                 </div>
                             </div>
                             </form>
@@ -188,11 +191,11 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body pb-5">
-                        <form action="/submit_lead" id="submit_form" data-parsley-validate="" method="POST">
+                        <form action="/submit_lead" id="submit_form1" method="POST">
                             <div class="row">
                                 <div class="col-md-6 col-12">
                                     <div class="mb-3">
-                                    data-parsley-validate=""   <span for="exampleFormControlInput1" class="form-label">First Name</span>
+                                      <span for="exampleFormControlInput1" class="form-label">First Name</span>
                                         <input type="text" class="form-control form-control00"
                                             id="exampleFormControlInput1" placeholder="First Name" name="first_name" required>
                                     </div>
@@ -209,8 +212,11 @@
                                 <div class="col-md-6 col-12">
                                     <div class="mb-3">
                                         <span for="exampleFormControlInput1" class="form-label">Email</span>
-                                        <input type="email" class="form-control form-control00"
-                                            id="exampleFormControlInput1" placeholder="Email" name="email" required>
+                                        <input class="form-control form-control00" type="text" placeholder="Email"
+                                        aria-label="Email" name="email" data-parsley-required="true"
+                                        data-parsley-required-message="Please Enter Valid Email Address"
+                                        data-parsley-group="block-4" data-parsley-type="email" data-parsley-validemail
+                                        type="email" required="">
                                     </div>
                                 </div>
 
@@ -218,13 +224,13 @@
                                     <div class="mb-3" >
                                         <span for="exampleFormControlInput1" class="form-label">Phone Number</span>
                                         <div class="change-country"></div>
-                                        <input placeholder="Phone No"  name="phone"
-                                            class="phonecode form-control form-control00"
-                                            data-parsley-required="true"
-                                            data-parsley-required-message="Please Enter Valid Phone Number"
-                                            data-parsley-group="block-4" data-parsley-type="number" 
-                                            type="tel" required="">
-                                        <div class="phoneerror"></div>
+                                        <input placeholder="Phone No" name="phone"
+                                        class="phonecode form-control form-control00"
+                                        data-parsley-required="true"
+                                        data-parsley-required-message="Please Enter Valid Phone Number"
+                                        data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                        type="tel" required="">
+                                        <div class="phoneerror"></div>                                       
                                     </div>
                                 </div>
                                 <input type="hidden" value="apartments" name="propertytype">
@@ -238,7 +244,7 @@
                                 <input type="hidden" name="project1" value="jumeriah">
                                 <div class="clearfix"></div>
                                 <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-dark" onclick="gtag_report_conversion()" type="submit">Register Now</button>
+                                    <button class="btn btn-dark" id="btn-submit" type="submit">Register Now</button>
                                 </div>
                                 </form>
                             </div>
@@ -648,17 +654,6 @@
         }
 
     }());
-
-    $(function () {
-        document.getElementById("submit_form").window.Parsley.on('field:validated', function () {
-                 var ok = $('.parsley-error').length === 0;
-                 $('.bs-callout-info').toggleClass('hidden', !ok);
-                 $('.bs-callout-warning').toggleClass('hidden', ok);
-             })
-             .on('form:submit', function () {
-                 return false; // Don't submit form for this demo
-             });
-     });
 </script>
 
 <%end%>

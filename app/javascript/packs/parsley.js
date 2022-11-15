@@ -2373,7 +2373,6 @@
 
   // This is included with the Parsley library itself,
   Parsley.addMessages('en', {
-    defaultMessage: "This value seems to be invalid.",
     type: {
       email: "This value should be a valid email.",
       url: "This value should be a valid url.",

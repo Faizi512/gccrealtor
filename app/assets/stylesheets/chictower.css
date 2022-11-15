@@ -738,3 +738,8 @@ figcaption {
 .iti.iti--allow-dropdown {
   display: block;
 }
+
+
+.error {
+  color: red
+}
