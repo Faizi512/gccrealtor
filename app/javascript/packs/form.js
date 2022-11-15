@@ -31,7 +31,7 @@ $(document).ready(function() {
             return true
           }else if(json.status == "Invalid"){
             $(".global-phone-success").removeClass("d-inline-block")
-            return $.Deferred().reject(`Please Enter Valid ${countryCode} Phone Number`);
+            return $.Deferred().reject(`Please Enter Valid Phone Number`);
           }else if(json.status == "Error"){
             isPhone = true
             return true
@@ -41,7 +41,7 @@ $(document).ready(function() {
           }
         }).catch(function(e) {
           if (e == `Please Enter Valid ${countryCode} Phone Number`) {
-            return $.Deferred().reject(`Please Enter Valid ${countryCode} Phone Number`)
+            return $.Deferred().reject(`Please Enter Valid Phone Number`)
           }else{
             isPhone = true
             $(".global-phone-success").addClass("d-inline-block")
