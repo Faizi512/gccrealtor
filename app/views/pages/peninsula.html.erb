@@ -30,7 +30,7 @@
                 <div class="col-md-4 col-12">
                     <div class="search_form">
                         <h6>Download Brochure</h6>
-                        <form action="/submit_lead" id="submit_form" data-parsley-validate="" method="POST">
+                        <form action="/submit_lead" id="submit_form"   method="POST">
                             <div class="mb-3">
                                 <input class="form-control form-control-lg cst_input" type="text"
                                     placeholder="First Name" aria-label="Full Name" name="first_name" required>
@@ -199,14 +199,14 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body pb-5">
-                            <form action="/submit_lead" id="submit_form" method="POST">
+                            <form action="/submit_lead" id="submit_form1" method="POST">
 
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="mb-3">
                                             <span for="exampleFormControlInput1" class="form-label">First Name</span>
                                             <input type="text" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="First Name" name="first_name">
+                                                placeholder="First Name" name="first_name" required>
                                         </div>
                                     </div>
 
@@ -214,14 +214,14 @@
                                         <div class="mb-3">
                                             <span for="exampleFormControlInput1" class="form-label">Last Name</span>
                                             <input type="text" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="Last Name" name="last_name">
+                                                placeholder="Last Name" name="last_name" required>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6 col-12">
                                         <div class="mb-3">
                                             <span for="exampleFormControlInput1" class="form-label">Email</span>
-                                            <input type="email" id="email" class=" email form-control" id="exampleFormControlInput1"
+                                            <input type="email" id="email" class="email form-control" id="exampleFormControlInput1"
                                                 placeholder="Email" name="email" data-parsley-required="true"
                                                 data-parsley-required-message="Please Enter Valid Email Address"
                                                 data-parsley-group="block-4" data-parsley-type="email" data-parsley-validemail
@@ -252,7 +252,7 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="d-grid gap-2 col-6 mx-auto">
-                                        <button class="btn btn-dark" onclick="gtag_report_conversion()"
+                                        <button class="btn btn-dark" id="btn-submit"
                                             type="submit">Register Now</button>
                                     </div>
                             </form>

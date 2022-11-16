@@ -4,7 +4,7 @@ import "./parsley"
 $(document).ready(function() {
 
 
-  const formValidation = {};
+  let formValidation = {};
   var areaCode;
   var countryCode1;
   var isPhone = false;
@@ -97,12 +97,36 @@ $(document).ready(function() {
     // validateApiPostcode()
   }
 
+  function validateModelForm(){
+    formValidation = $('#submit_form1').parsley({
+      trigger: "focusout",
+      errorClass: 'error',
+      successClass: 'valid',
+      errorsWrapper: '<div class="parsley-error-list"></div>',
+      errorTemplate: '<label class="error"></label>',
+      errorsContainer (field) {
+        if(field.$element.hasClass('approve')){
+          return $('.error-checkbox')
+        }
+        if(field.$element.hasClass('phone')){
+          return $('.phoneerror')
+        }
+        return field.$element.parent()
+      },
+    })
+    validatePhone()
+    validateEmail()
+    // validateApiPostcode()
+  }
+
 
   function validateEmail(){
     window.Parsley.addValidator('validemail', {
       validateString: function(value){
+        debugger
         var xhr = $.ajax('https://go.webformsubmit.com/dukeleads/restapi/v1.2/validate/email?key=50f64816a3eda24ab9ecf6c265cae858&value='+$('.email').val());
         return xhr.then(function(json) {
+          debugger
           if (json.status == "Valid") {
             isEmail = true;
             return true
@@ -140,6 +164,7 @@ $(document).ready(function() {
   geoDetection();
 
   validate();
+  validateModelForm()
 
   
 
