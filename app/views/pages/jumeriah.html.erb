@@ -21,56 +21,151 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-12">
-                    <div class="search_form">
-                        <div class="search_form01">
-                            <h6>Download Brochure</h6>
-                            <form action="/submit_lead" id="submit_form" method="POST" >
-                            <div class="row">
-                                <div class="mb-3">
-                                    <input class="form-control form-control-lg cst_input" type="text" name="first_name"
-                                        placeholder="First Name" aria-label="Full Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input class="form-control form-control-lg cst_input" type="text" name="last_name"
-                                        placeholder="Last Name" aria-label="Full Name" required>
-                                </div>
-                                <div class="mb-3">
-                                <input class="form-control email form-control-lg cst_input" type="text" placeholder="Email"
-                                    aria-label="Email" name="email" data-parsley-required="true"
-                                    data-parsley-required-message="Please Enter Valid Email Address"
-                                    data-parsley-group="block-4" data-parsley-type="email" data-parsley-validemail
-                                    type="email" required="">
-                                </div>
-                                <div class="mb-3">
-                                    <div class="change-country"></div>
-                                    <input placeholder="Phone No" name="phone"
-                                    class="phonecode form-control form-control-lg cst_input"
-                                    data-parsley-required="true"
-                                    data-parsley-required-message="Please Enter Valid Phone Number"
-                                    data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
-                                    type="tel" required="">
-                                    <div class="phoneerror"></div>
-                                </div>
-                                <input type="hidden" value="apartments" name="propertytype">
-                                <input id='inp1' value="studio" type='hidden' name='bedrooms[]'>
-                                <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>
-                                <input id='inp18' name="purchasepurpose" value="Personal Use" type='hidden'>
-                                <input type="hidden" name="sid" value="1">
-                                <input type="hidden" name="project" value="Jumeirah Living Business Bay">
-                                <input type="hidden" id="phonecode" name="phonecode" value="+44">
-                                <input type="hidden" name="phonelocal" value="12345678">
-                                <input type="hidden" name="project1" value="jumeriah">
-                                <div class="d-grid gap-2"> <button id="btn-submit" class="btn cstbtn" type="submit">Download Now</button>
-                                </div>
+<!--                <div class="col-md-4 col-12">-->
+<!--                    <div class="search_form">-->
+<!--                        <div class="search_form01">-->
+<!--                            <h6>Download Brochure</h6>-->
+<!--                          <form action="/submit_lead" id="submit_form" method="POST">-->
+<!--                            <div class="row">-->
+<!--                              <div class="col-md-6 col-12">-->
+<!--                                <div class="mb-3">-->
+<!--                                                <span for="exampleFormControlInput1" class="form-label">First-->
+<!--                                                    Name</span>-->
+<!--                                  <input type="text" class="form-control" id="exampleFormControlInput1"-->
+<!--                                         placeholder="First Name" name="first_name">-->
+<!--                                </div>-->
+<!--                              </div>-->
+
+<!--                              <div class="col-md-6 col-12">-->
+<!--                                <div class="mb-3">-->
+<!--                                  <span for="exampleFormControlInput1" class="form-label">Last Name</span>-->
+<!--                                  <input type="text" class="form-control" id="exampleFormControlInput1"-->
+<!--                                         placeholder="Last Name" name="last_name">-->
+<!--                                </div>-->
+<!--                              </div>-->
+
+<!--                              <div class="col-md-6 col-12">-->
+<!--                                <div class="mb-3">-->
+<!--                                  <span for="exampleFormControlInput1" class="form-label">Email</span>-->
+<!--                                  <input type="email" class="form-control" id="exampleFormControlInput1"-->
+<!--                                         placeholder="Email" name="email">-->
+<!--                                </div>-->
+<!--                              </div>-->
+
+<!--                              <div class="col-md-6 col-12">-->
+<!--                                <div class="mb-3">-->
+<!--                                                <span for="exampleFormControlInput1" class="form-label">Phone-->
+<!--                                                    Number</span>-->
+<!--                                  <div class="change-country"></div>-->
+<!--                                  <input placeholder="Phone No" name="phone"-->
+<!--                                         class="phonecode form-control"-->
+<!--                                         data-parsley-required="true"-->
+<!--                                         data-parsley-required-message="Please Enter Valid Phone Number"-->
+<!--                                         data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone-->
+<!--                                         type="tel" required="">-->
+<!--                                  <div class="phoneerror"></div>-->
+
+<!--                                  <input type="hidden" value="apartments" name="propertytype">-->
+<!--                                  <input id='inp1' value="studio" type='hidden' name='bedrooms[]'>-->
+<!--                                  <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>-->
+<!--                                  <input id='inp18' name="purchasepurpose" value="Personal Use"-->
+<!--                                         type='hidden'>-->
+<!--                                  <input type="hidden" name="sid" value="1">-->
+<!--                                  <input type="hidden" name="project"-->
+<!--                                         value="CHIC Tower De GRISOGONO Geneve">-->
+<!--                                  <input type="hidden" id="phonecode" name="phonecode" value="+44">-->
+<!--                                  <input type="hidden" name="phonelocal" value="12345678">-->
+<!--                                  <input type="hidden" name="project1" value="chictower">-->
+<!--                                </div>-->
+<!--                              </div>-->
+<!--                              <div class="clearfix"></div>-->
+<!--                              <div class="d-grid gap-2 col-6 mx-auto">-->
+<!--                                <button id="btn-submit" class="btn btn-dark"-->
+<!--                                        type="submit">Register Now</button>-->
+<!--                              </div>-->
+<!--                          </form>-->
+
+
+
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                   aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Download Brochure</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                              aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pb-5">
+                      <form action="/submit_lead" id="submit_form" method="POST">
+                        <div class="row">
+                          <div class="col-md-6 col-12">
+                            <div class="mb-3">
+                                                <span for="exampleFormControlInput1" class="form-label">First
+                                                    Name</span>
+                              <input type="text" class="form-control" id="exampleFormControlInput1"
+                                     placeholder="First Name" name="first_name">
                             </div>
-                            </form>
+                          </div>
 
+                          <div class="col-md-6 col-12">
+                            <div class="mb-3">
+                              <span for="exampleFormControlInput1" class="form-label">Last Name</span>
+                              <input type="text" class="form-control" id="exampleFormControlInput1"
+                                     placeholder="Last Name" name="last_name">
+                            </div>
+                          </div>
 
-                        </div>
+                          <div class="col-md-6 col-12">
+                            <div class="mb-3">
+                              <span for="exampleFormControlInput1" class="form-label">Email</span>
+                              <input type="email" class="form-control" id="exampleFormControlInput1"
+                                     placeholder="Email" name="email">
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 col-12">
+                            <div class="mb-3">
+                                                <span for="exampleFormControlInput1" class="form-label">Phone
+                                                    Number</span>
+                              <div class="change-country"></div>
+                              <input placeholder="Phone No" name="phone"
+                                     class="phonecode form-control"
+                                     data-parsley-required="true"
+                                     data-parsley-required-message="Please Enter Valid Phone Number"
+                                     data-parsley-group="block-4" data-parsley-type="number" data-parsley-validphone
+                                     type="tel" required="">
+                              <div class="phoneerror"></div>
+
+                              <input type="hidden" value="apartments" name="propertytype">
+                              <input id='inp1' value="studio" type='hidden' name='bedrooms[]'>
+                              <input id='inp13' type='hidden' value="BelowAED1,000.000" name='budget'>
+                              <input id='inp18' name="purchasepurpose" value="Personal Use"
+                                     type='hidden'>
+                              <input type="hidden" name="sid" value="1">
+                              <input type="hidden" name="project"
+                                     value="CHIC Tower De GRISOGONO Geneve">
+                              <input type="hidden" id="phonecode" name="phonecode" value="+44">
+                              <input type="hidden" name="phonelocal" value="12345678">
+                              <input type="hidden" name="project1" value="chictower">
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                          <div class="d-grid gap-2 col-6 mx-auto">
+                            <button id="btn-submit" class="btn btn-dark"
+                                    type="submit">Register Now</button>
+                          </div>
+                      </form>
 
                     </div>
+                  </div>
                 </div>
+              </div>
+            </div>
                 <div class="clearfix"></div>
             </div>
 
