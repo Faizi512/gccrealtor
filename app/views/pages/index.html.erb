@@ -17,7 +17,6 @@
 			<ol class="carousel-indicators">
 				<li class="active" data-target="#carousel" data-slide-to="0"></li>
 				<li data-target="#carousel" data-slide-to="1"></li>
-				<li data-target="#carousel" data-slide-to="2"></li>
 			</ol>
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active boat">
@@ -26,19 +25,6 @@
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="caption animated fadeIn">
                   <h2 class="animated fadeInLeft">Boat Excursions</h2>
-                  <p class="animated fadeInRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
-                  <a class="animated fadeInUp btn delicious-btn" href="#">Learn more</a>
-                </div>
-              </div>
-            </div>
-          </div>-->
-				</div>
-				<div class="carousel-item sea">
-					<!--          <div class="container h-100 d-md-block">
-            <div class="row align-items-center h-100">
-              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                <div class="caption animated fadeIn">
-                  <h2 class="animated fadeInLeft">Discover the canyon by the sea</h2>
                   <p class="animated fadeInRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
                   <a class="animated fadeInUp btn delicious-btn" href="#">Learn more</a>
                 </div>
@@ -128,7 +114,7 @@
 												<div class="col-md-6 col-6">
 
 													<div class="checkbox block">
-														<input type="checkbox" id="checkbox1" value="studio"
+														<input type="radio" id="checkbox1" value="studio"
 															name='bedrooms[]'  
 															data-parsley-required-message="Please Select atleast one option"
 															data-parsley-group="block-1" >
@@ -138,7 +124,7 @@
 
 													</div>
 													<div class="checkbox block">
-														<input value="1-2 Bedroom" type='checkbox' name='bedrooms[]'
+														<input value="1-2 Bedroom" type='radio' name='bedrooms[]'
 															id="checkbox2" data-parsley-group="block-1">
 														<label for="checkbox2">1-2 Bedroom</label>
 													</div>
@@ -146,12 +132,12 @@
 												</div>
 												<div class="col-md-6 col-6">
 													<div class="checkbox block">
-														<input value="2-3 Bedroom" type='checkbox' name='bedrooms[]'
+														<input value="2-3 Bedroom" type='radio' name='bedrooms[]'
 															id="checkbox7" data-parsley-group="block-1">
 														<label for="checkbox7">2-3 Bedroom</label>
 													</div>
 													<div class="checkbox block">
-														<input value="3+ Bedroom" type='checkbox' name='bedrooms[]'
+														<input value="3+ Bedroom" type='radio' name='bedrooms[]'
 															id="checkbox8" data-parsley-group="block-1">
 														<label for="checkbox8">3+ Bedroom</label>
 													</div>
@@ -175,7 +161,7 @@
 
 														<tr>
 															<td>
-																<input id='inp13' type='radio'
+																<input id='inp13' type='radio'  class="checkbox-custom"
 																	value="Below AED 1,000.000" name='budget'
 																	 
 																	data-parsley-required-message="Please Select atleast one option"
@@ -187,7 +173,7 @@
 														</tr>
 														<tr>
 															<td>
-																<input id='inp14' type='radio'
+																<input id='inp14' type='radio'  class="checkbox-custom"
 																	value="AED 200,000 to 500,000" name='budget' data-parsley-group="block-2">
 
 															</td>
@@ -197,7 +183,7 @@
 														</tr>
 														<tr>
 															<td>
-																<input id='inp15' type='radio'
+																<input id='inp15' type='radio'  class="checkbox-custom"
 																	value="More than AED 10,000.000" name='budget' data-parsley-group="block-2">
 															</td>
 															<td>
@@ -211,7 +197,7 @@
 
 														<tr>
 															<td>
-																<input id='inp16' type='radio'
+																<input id='inp16' type='radio'  class="checkbox-custom"
 																	value="AED 1,000.000 - 2,000.000" name='budget' data-parsley-group="block-2">
 
 															</td>
@@ -220,8 +206,8 @@
 															</td>
 														</tr>
 														<tr>
-															<td>
-																<input id='inp17' type='radio'
+															<td >
+																<input id='inp17' type='radio' class="checkbox-custom"
 																	value="AED 5,000.000 - 10,000.000" name='budget' data-parsley-group="block-2">
 
 															</td>
@@ -249,7 +235,7 @@
 
 														<tr>
 															<td>
-																<input id='inp18' name="purchasepurpose"
+																<input id='inp18' name="purchasepurpose" class="checkbox-custom"
 																	value="Personal Use" type='radio'
 																	 
 																	data-parsley-required-message="Please Select atleast one option"
@@ -261,7 +247,7 @@
 														</tr>
 														<tr>
 															<td>
-																<input id='inp20' name="purchasepurpose" type='radio'
+																<input id='inp20' name="purchasepurpose" type='radio' class="checkbox-custom"
 																	value="investment and income generation" data-parsley-group="block-3">
 
 															</td>
@@ -277,7 +263,7 @@
 
 														<tr>
 															<td>
-																<input id='inp19' name="purchasepurpose" type='radio'
+																<input id='inp19' name="purchasepurpose" type='radio' class="checkbox-custom"
 																	value="Secondary Income" data-parsley-group="block-3">
 
 															</td>
@@ -743,9 +729,9 @@
 
 	Array.from(document.querySelectorAll("table")).forEach((element, index) => {
 		Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
-			var checkmark = document.createElement("span");
-			checkmark.classList.add("checkmark");
-			myinp.parentNode.appendChild(checkmark);
+			// var checkmark = document.createElement("span");
+			// checkmark.classList.add("checkmark");
+			// myinp.parentNode.appendChild(checkmark);
 			myinp.addEventListener("change", changed);
 		});
 	});

@@ -787,6 +787,18 @@ table tbody tr td:first-child {
 
 
 /*Create a custom checkbox */
+
+.checkbox-custom
+{
+  accent-color: #f56b3b;
+  position: absolute;
+  top: 4px;
+  left: -16px !important;
+  height: 77%;
+  width: 25px;
+  background-color: #fff;
+
+}
 .checkmark,
 .dotmark {
   position: absolute;

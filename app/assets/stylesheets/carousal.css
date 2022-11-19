@@ -7,9 +7,7 @@
 #carousel .carousel-item.boat{
   background-image:url("herobg1.jpg");
 }
-#carousel .carousel-item.sea{
-  background-image:url("herobg2.jpg");
-}
+
 #carousel .carousel-item.river{
   background-image:url("herobg3.jpg");
 }
