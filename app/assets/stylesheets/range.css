@@ -1,0 +1,87 @@
+.value {
+    color: inherit;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input#rangeInput {
+    padding: 0px!important;
+}
+
+.rangeinput[type="range"] {
+    width: var(--range-input-width);
+    margin-top: var(--range-margin-top);
+    margin-bottom: var(--range-margin-bottom);
+    background-color: transparent;
+    -webkit-appearance: none;
+    padding: 0;
+    height: auto;
+    border: none;
+}
+
+.rangeinput[type="range"]:focus {
+    outline: none;
+}
+
+.rangeinput[type="range"]:focus ~ ::-webkit-slider-thumb {
+    outline: var(--thumb-focus-outline);
+    border: var(--thumb-focus-border);
+    box-shadow: var(--thumb-focus-box-shadow);
+}
+
+.rangeinput[type="range"]::-webkit-slider-runnable-track {
+    background: var(--track-bg);
+    border: var(--track-border);
+    border-radius: var(--track-border-radius);
+    width: var(--track-width);
+    height: var(--track-height);
+    cursor: pointer;
+}
+
+.rangeinput[type="range"]::-webkit-slider-thumb {
+    margin-top: var(--thumb-margin-top);
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    background: var(--thumb-bg);
+    border: var(--thumb-border);
+    border-radius: var(--thumb-border-radius);
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.rangeinput[type="range"]:focus::-webkit-slider-thumb {
+    outline: var(--thumb-focus-outline);
+    border: var(--thumb-focus-border);
+    box-shadow: var(--thumb-focus-box-shadow);
+}
+
+.rangeinput[type="range"]:focus::-webkit-slider-runnable-track {
+    background: var(--track-bg);
+}
+
+.rangeinput[type="range"]::-moz-range-track {
+    background: var(--track-bg);
+    border: var(--track-border);
+    border-radius: var(--track-border-radius);
+    width: var(--track-width);
+    height: var(--track-height);
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    background: var(--thumb-bg);
+    border: var(--thumb-border);
+    border-radius: var(--thumb-border-radius);
+    cursor: pointer;
+}
+
+.range-val-wrap {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+}

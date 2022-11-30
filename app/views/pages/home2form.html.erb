@@ -1,0 +1,536 @@
+<%=content_for :css do %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<%#= stylesheet_link_tag 'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'home2', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'carousal', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'step2', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'range', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
+
+<%= stylesheet_link_tag 'animate', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%end%>
+
+<body class="form_bg0">
+    <div class="form_bg">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="col-md-9 col-12">
+                    <div class="form_div">
+                        <a href="/"><%=image_tag "home2/logo.png" , width: "200" , alt: "" %></a>
+                        <h5 class="form_text">Find your dream property now in<br>
+                            less than 60 seconds</h5>
+                        <div class="search_form">
+                            <div class="">
+                                <div class="fieldsetStep d-flex justify-content-center align-items-end"><span></span>
+                                </div>
+                                <form id="msform" class="fieldsetForm">
+                                    <fieldset data-step="What are you looking for?">
+                                        <div class="form-card d-flex justify-content-center">
+                                            <div class="">
+                                                <!-- <p class="mb-3">Choose Now</p>-->
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-6 col-12 cst_pad">
+                                                        <label class="image-radio">
+                                                            <%=image_tag "home2/ch1.png" , class: "img-fluid size"  %>
+                                                            <strong>Apartments</strong>
+                                                            <input type="radio" name="image_radio" value="1" />
+                                                            <!--      <i class="fa fa-check hidden"></i>-->
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-6 col-12 cst_pad">
+                                                        <label class="image-radio">
+                                                            <%=image_tag  "home2/ch2.png", class: "img-fluid size"  %>
+                                                            <strong> Villa</strong>
+                                                            <input type="radio" name="image_radio" value="" />
+                                                            <!--      <i class="fa fa-check hidden"></i>-->
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-6 col-12 cst_pad">
+                                                        <label class="image-radio">
+                                                            <%=image_tag  "home2/ch3.png", class: "img-fluid size"  %>
+                                                                                      <strong>Townhouse</strong>
+                                                            <input type="radio" name="image_radio" value="" />
+                                                            <!--      <i class="fa fa-check hidden"></i>-->
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-12 cst_pad">
+                                                        <label class="image-radio">
+                                                            <%=image_tag  "home2/ch4.png", class: "img-fluid size"  %>
+                                                            <strong>Penthouse</strong>
+                                                            <input type="radio" name="image_radio" value="" />
+                                                            <!--      <i class="fa fa-check hidden"></i>-->
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                    </fieldset>
+                                    <fieldset data-step="How many bedrooms you are looking for?">
+                                        <!--<span class="badge badge-secondary">Select One or More</span>-->
+                                        <div class="form-card d-flex justify-content-center">
+                                            <div class="col-lg-9 col-12">
+                                                <ul class="payment-options">
+                                                    <li>
+                                                        <input id="knet" type="radio" name="select" value="1"
+                                                            checked="" />
+                                                        <label for="knet">
+                                                            <h3>Studio</h3>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input id="cc" type="radio" name="select" value="2" />
+                                                        <label for="cc">
+                                                            <h3>1</h3>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input id="cod" type="radio" name="select" value="3" />
+                                                        <label for="cod">
+                                                            <h3>2+</h3>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input id="selfpick" type="radio" name="select" value="4" />
+                                                        <label for="selfpick">
+                                                            <h3>3+</h3>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
+                                    </fieldset>
+                                    <fieldset data-step="What is your Budget Approximately?">
+                                        <div class="form-card d-flex justify-content-center">
+                                            <div class="col-lg-9 col-12">
+                                                <p>Move the slider to select amount</p>
+                                                <div class="range-val-wrap">
+                                                    <!--                                                    <output class="value" for="range" name="rangeValue">AED 1,000,000</output>-->
+                                                    <div>AED <span id="slider_value"> 1 </span>,000,000<span
+                                                            class="plus-icon" style="display: none;">+</span> </div>
+                                                </div>
+                                                <input class="range-field range0input" id="rangeInput" type="range"
+                                                    name="budget" min="1" max="10" step="0" value="1" />
+
+                                            </div>
+                                        </div>
+
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
+                                    </fieldset>
+                                    <fieldset data-step="What kind of property you are looking for?">
+                                        <div class="form-card d-flex justify-content-center">
+                                            <div class="col-lg-9 col-12">
+                                                <ul class="payment-options01">
+                                                    <li>
+                                                        <input id="Primary" type="radio" name="select" value="1"
+                                                            checked="" />
+                                                        <label for="Primary">
+                                                            <h3>Primary Residence</h3>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input id="Investment" type="radio" name="select" value="2" />
+                                                        <label for="Investment">
+                                                            <h3>An Investment</h3>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input id="Income" type="radio" name="select" value="3" />
+                                                        <label for="Income">
+                                                            <h3>Passive Income</h3>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
+                                    </fieldset>
+                                    <fieldset data-step="Based on your answers to find your dream home:">
+                                        <div class="form-card d-flex justify-content-center">
+                                            <div class="col-lg-9 col-12">
+                                                <ul class="selected_cont">
+                                                    <li><%=image_tag "home2/check.png" , width: "36" , height: "36" , alt: "" %>
+                                                        Villa</li>
+                                                    <li><%=image_tag "home2/check.png" , width: "36" , height: "36" , alt: "" %> 1
+                                                    </li>
+                                                    <li><%=image_tag "home2/check.png" , width: "36" , height: "36" , alt: "" %>
+                                                        1,500,000</li>
+                                                    <li><%=image_tag "home2/check.png" , width: "36" , height: "36" , alt: "" %> An
+                                                        Investment</li>
+                                                </ul>
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-12 mb-3 cst_pad">
+                                                        <label class="label_tag">First Name <span>*</span></label>
+                                                        <input class="form-control form-control-lg cst_input"
+                                                            type="text" placeholder="First Name" aria-label="Full Name">
+                                                    </div>
+                                                    <div class="col-lg-6 col-12 mb-3 cst_pad">
+                                                        <label class="label_tag">Last Name <span>*</span></label>
+                                                        <input class="form-control form-control-lg cst_input"
+                                                            type="text" placeholder="First Name" aria-label="Full Name">
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-12 mb-3 cst_pad">
+                                                        <label class="label_tag">Email <span>*</span></label>
+                                                        <input class="form-control form-control-lg cst_input"
+                                                            type="text" placeholder="Email" aria-label="Email">
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-12 mb-3 cst_pad">
+                                                        <label class="label_tag">Phone No <span>*</span></label>
+                                                        <input class="form-control form-control-lg cst_input"
+                                                            type="text" placeholder="+971 234 5678 900"
+                                                            aria-label="Phone No">
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-12 mb-3 cst_pad">
+                                                        <label class="label_tag">WhatsApp Number <span>*</span></label>
+                                                        <input class="form-control form-control-lg cst_input"
+                                                            type="text" placeholder="+971 234 5678 900"
+                                                            aria-label="WhatsApp Number">
+                                                    </div>
+
+                                                    <!--								<div class="col-lg-12 col-12 float-left text-left">
+							 <div class="form-check float-left">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Mobile & WhatsApp numbers are the same
+  </label>
+</div>
+								</div>
+								
+								<div class="col-lg-12 col-12 float-left text-left">
+								<div class="form-check float-left">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    Receive property alerts on WhatsApp *
+  </label>
+</div>
+								</div>-->
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
+                                        <input type="button" name="Submit" class="next action-button" value="Submit" />
+                                        <!--<input type="button" name="previous" class="previous action-button-previous" value="Previous" />-->
+                                    </fieldset>
+
+                                    <fieldset data-step="Finish">
+                                        <div class="form-card">
+                                            <h2 class="purple-text text-center"><strong>Thank You</strong></h2> <br>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="ftrbg">
+        <div class="container">
+            <!--		   <ul>
+		    <li><a href="#"><%=image_tag "home2/sc1.png" , width: "40" , height: "40" , alt: ""%></a></li> 
+		    <li><a href="#"><%=image_tag "home2/sc2.png" , width: "40" , height: "40" , alt: ""%></a></li> 
+		    <li><a href="#"><%=image_tag "home2/sc3.png" , width: "40" , height: "40" , alt: ""%></a></li> 
+		    <li><a href="#"><%=image_tag "home2/sc4.png" , width: "40" , height: "40" , alt: ""%></a></li> 
+		    <li><a href="#"><%=image_tag "home2/sc5.png" , width: "40" , height: "40" , alt: ""%></a></li> 
+		    <li><a href="#"><%=image_tag "home2/sc6.png" , width: "40" , height: "40" , alt: ""%></a></li> 
+		   </ul>-->
+            <p>© 2022 <strong>GCCREALTORS</strong>.</p>
+        </div>
+    </div>
+
+    <!--HTML Content End-->
+    <%=content_for :javascript do%>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <%= javascript_pack_tag 'carousal', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'parsley', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'step', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'jqueryanimatecss', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'form', 'data-turbolinks-track': 'reload' %>
+
+
+
+
+    <script>
+        let buttonSub = document.getElementById("btn2");
+        let text = document.getElementById("red-1");
+
+        let checkbox1 = document.getElementById("checkbox1");
+        let checkbox2 = document.getElementById("checkbox2");
+        let checkbox7 = document.getElementById("checkbox7");
+        let checkbox8 = document.getElementById("checkbox8");
+
+        buttonSub.disabled = true;
+        buttonSub.style.background = "gray";
+
+        $("div").click(function () {
+            if (checkbox1.checked) {
+                buttonSub.disabled = false;
+                buttonSub.style.background = "#f56b3b";
+                text.style.display = "none";
+            } else if (checkbox2.checked) {
+                buttonSub.disabled = false;
+                buttonSub.style.background = "#f56b3b";
+                text.style.display = "none";
+            } else if (checkbox7.checked) {
+                buttonSub.disabled = false;
+                buttonSub.style.background = "#f56b3b";
+                text.style.display = "none";
+            } else if (checkbox8.checked) {
+                buttonSub.disabled = false;
+                buttonSub.style.background = "#f56b3b";
+                text.style.display = "none";
+            } else {
+                buttonSub.disabled = true;
+                buttonSub.style.background = "gray";
+                text.style.display = "block";
+            }
+        });
+
+        let buttonSub3 = document.getElementById("btn3");
+        let text2 = document.getElementById("red-2");
+
+        let inp13 = document.getElementById("inp13");
+        let inp14 = document.getElementById("inp14");
+        let inp15 = document.getElementById("inp15");
+        let inp16 = document.getElementById("inp16");
+        let inp17 = document.getElementById("inp17");
+        buttonSub3.disabled = true;
+        buttonSub3.style.background = "gray";
+
+        $("div").click(function () {
+            if (inp13.checked) {
+                buttonSub3.disabled = false;
+                buttonSub3.style.background = "#f56b3b";
+                text2.style.display = "none";
+            } else if (inp14.checked) {
+                buttonSub3.disabled = false;
+                buttonSub3.style.background = "#f56b3b";
+                text2.style.display = "none";
+            } else if (inp15.checked) {
+                buttonSub3.disabled = false;
+                buttonSub3.style.background = "#f56b3b";
+                text2.style.display = "none";
+            } else if (inp16.checked) {
+                buttonSub3.disabled = false;
+                buttonSub3.style.background = "#f56b3b";
+                text2.style.display = "none";
+            } else if (inp17.checked) {
+                buttonSub3.disabled = false;
+                buttonSub3.style.background = "#f56b3b";
+                text2.style.display = "none";
+            } else {
+                buttonSub3.disabled = true;
+                buttonSub3.style.background = "gray";
+                text2.style.display = "block";
+            }
+        });
+
+        let buttonSub4 = document.getElementById("btn4");
+        let text3 = document.getElementById("red-3");
+
+        let inp19 = document.getElementById("inp19");
+        let inp20 = document.getElementById("inp20");
+        let inp18 = document.getElementById("inp18");
+
+        buttonSub4.disabled = true;
+        buttonSub4.style.background = "gray";
+
+        $("div").click(function () {
+            if (inp19.checked) {
+                buttonSub4.disabled = false;
+                buttonSub4.style.background = "#f56b3b";
+                text3.style.display = "none";
+            } else if (inp18.checked) {
+                buttonSub4.disabled = false;
+                buttonSub4.style.background = "#f56b3b";
+                text3.style.display = "none";
+            } else if (inp20.checked) {
+                buttonSub4.disabled = false;
+                buttonSub4.style.background = "#f56b3b";
+                text3.style.display = "none";
+            } else {
+                buttonSub4.disabled = true;
+                buttonSub4.style.background = "gray";
+                text3.style.display = "block";
+            }
+        });
+
+        var changed = function () {
+
+            Array.from(document.querySelectorAll("table")).forEach((element, index) => {
+                Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
+
+                    if (myinp.checked == true) {
+                        myinp.parentNode.parentNode.classList.add("active");
+                    } else {
+                        myinp.parentNode.parentNode.classList.remove("active");
+                    }
+
+                });
+            });
+        } //changed function ends
+
+        Array.from(document.querySelectorAll("table")).forEach((element, index) => {
+            Array.from(element.querySelectorAll("input")).forEach((myinp, index) => {
+                // var checkmark = document.createElement("span");
+                // checkmark.classList.add("checkmark");
+                // myinp.parentNode.appendChild(checkmark);
+                myinp.addEventListener("change", changed);
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            // show/hide the relevant buttons for browsers that have JS enabled
+            $(".expanded-content").hide();
+            $(".show-more").show();
+
+            // handle "Show More" button click
+            $(".show-more").click(function (e) {
+                e.preventDefault();
+
+                var _clicked = $(this);
+
+                /*if ( $(".hide-content").length > 0 ) {
+                    // close all other currently expanded blocks
+                    $(".expanded-content").each(function() {
+                      $(this).hide();
+                    });   
+                }*/
+
+                var parent = _clicked.closest(".expandable-content-block");
+                $(".expanded-content", parent).show();
+                _clicked.hide();
+
+            });
+
+            // handle "Show Less" button click
+            $(".hide-content").click(function (e) {
+                e.preventDefault();
+
+                var _clicked = $(this);
+                var parent = _clicked.closest(".expandable-content-block");
+                $(".expanded-content", parent).hide();
+                $(parent).find(".show-more").show();
+            });
+        });
+    </script>
+
+
+    <script>
+        /* Demo purposes only */
+        var snippet = [].slice.call(document.querySelectorAll('.hover'));
+        if (snippet.length) {
+            snippet.forEach(function(snippet) {
+                snippet.addEventListener('mouseout', function(event) {
+                    if (event.target.parentNode.tagName === 'figure') {
+                        event.target.parentNode.classList.remove('hover')
+                    } else {
+                        event.target.parentNode.classList.remove('hover')
+                    }
+                });
+            });
+        }
+
+    </script>
+
+    <script>
+        $(document).ready(function() {
+
+            $(document).on('input change', '#rangeInput', function() {
+                $('#slider_value').html($(this).val());
+                var get_val = $('#slider_value').html();
+                console.log(get_val);
+                if (get_val == 10) {
+                    $('.plus-icon').show();
+                } else {
+                    $('.plus-icon').hide();
+                }
+
+            });
+
+            // show/hide the relevant buttons for browsers that have JS enabled
+            $(".expanded-content").hide();
+            $(".show-more").show();
+
+            // handle "Show More" button click
+            $(".show-more").click(function(e) {
+                e.preventDefault();
+
+                var _clicked = $(this);
+
+                /*if ( $(".hide-content").length > 0 ) {
+                    // close all other currently expanded blocks
+                    $(".expanded-content").each(function() {
+                      $(this).hide();
+                    });   
+                }*/
+
+                var parent = _clicked.closest(".expandable-content-block");
+                $(".expanded-content", parent).show();
+                _clicked.hide();
+
+            });
+
+            // handle "Show Less" button click
+            $(".hide-content").click(function(e) {
+                e.preventDefault();
+
+                var _clicked = $(this);
+                var parent = _clicked.closest(".expandable-content-block");
+                $(".expanded-content", parent).hide();
+                $(parent).find(".show-more").show();
+            });
+        });
+
+    </script>
+	
+    <script>
+        var input = document.querySelector("#phone");
+        var iti = window.intlTelInput(input, {
+            // separateDialCode:true,
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.3/build/js/utils.js",
+        });
+
+        // store the instance variable so we can access it in the console e.g. window.iti.getNumber()
+        window.iti = iti;
+
+    </script>
+<%end%>
+
+
+
+</body>

@@ -1,70 +1,37 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+.image-radio {
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border:1px solid transparent; border:solid #dbdbdb 1px;
+  margin-bottom: 0; padding: 8px;
+  outline: 0; border-radius:8px;
 }
-
-#carousel .carousel-item.boat{
-  background-image:url("herobg1.jpg");
+.image-radio input[type="radio"] {
+  display: none;
 }
-
-#carousel .carousel-item.river{
-  background-image:url("herobg3.jpg");
+.image-radio-checked {
+      border-color: #26B1F9;
+  background: #F2F9FC;
 }
-#carousel .carousel-item{
-  height: 80vh;
-  width:100%;
-  min-height:350px;
-  background:no-repeat center center scroll;
-  background-size:cover;
+.image-radio .fa-check-square {
+position: absolute;
+  color: #fff;
+  top: -2px;
+  right: 27px;
 }
-#carousel .carousel-inner .carousel-item{
-  transition:-webkit-transform 2s ease;
-  transition:transform 2s ease;
-  transition:transform 2s ease, -webkit-transform 2s ease;
+.fa-check-square:before {
+ 
+  font-size: 32px;
 }
-#carousel .carousel-item .caption{
-  background:rgba(0,0,0,0.7);
-  padding:40px;
-  color:white;
-  animation-duration: 1s;
-  animation-delay: 2s;
+.image-radio-checked .fa-check-square {
+display: block !important;
 }
-#carousel .caption h2{
-  animation-duration: 1s;
-  animation-delay: 2s;
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
 }
-#carousel .caption p{
-  animation-duration: 1s;
-  animation-delay: 2.2s;
-}
-
-#carousel .caption a{
-  animation-duration: 1s;
-  animation-delay: 2.4s;
-}
-.delicious-btn{
-  display: inline-block;
-  min-width:160px;
-  font-weight:600 !important;
-  background-color:black !important;
-  height:40px;
-  color:white !important;
-  border-left:3px solid #1c8314;
-  border-radius: 0;
-  font-size:16px;
-  line-height:58px;
-  font-weight:600;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  text-transform: capitalize;
-  background:#40ba37;
-}
-.delicious-btn:hover,
-.delicious-btn:active,
-.delicious-btn:focus{
-  font-size:16px;
-  font-weight: 600;
-  color:white !important;
-  background:#001633 !important;
+.image-radio-checked .fa-check-square {
+  display: block !important;
+  visibility: visible !important;
 }

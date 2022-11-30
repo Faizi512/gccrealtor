@@ -18,6 +18,12 @@ class PagesController < ApplicationController
     def peninsula
     end
 
+    def home2
+    end
+
+    def form
+    end
+
     def submit_lead
         uri = URI("https://dukeleads.leadbyte.co.uk/api/submit.php?returnjson=yes&campid=GCC-REALTORS&email=#{params[:email]}&firstname=#{params[:first_name]}&lastname=#{params[:last_name]}&phone1=#{params[:phone]}&sid=#{params[:sid]}&project=#{params[:project]}&propertytype=#{params[:propertytype]}&bedrooms=#{params[:bedrooms]}&purchasepurpose=#{params[:purchasepurpose]}&budget=#{params[:budget]}&phonecode=#{params[:phonecode]}&phonelocal=#{params[:phone]}&sid=#{params[:sid]}&optinurl=#{"https://gccrealtors.com/" + params[:project1]}")
         res = Net::HTTP.get_response(uri)
